@@ -1,0 +1,8 @@
+# SCSS MAP #
+*.map
+
+# Directories #
+/.sass-cache
+
+# HTML #
+*.bak

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="../../css/style.css">
+<script src="../../js/includeHTML.js"></script>
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/ui.js"></script>
+<title>NATOO | Facial and Skin AI Platform</title>
+</head>
+<body>
+
+<div class="wrap">
+
+    <!-- LNB -->
+    <div class="header-left" include-html="../include/header.html"></div>
+    <!-- // LNB -->
+
+    <!-- content -->
+    <main class="container">
+        <article class="content">
+            <!-- Total, Today | 관리자 로그인 정보 -->
+            <div class="con-head" include-html="../include/login_info.html"></div>
+            <!-- // Total, Today | 관리자 로그인 정보 -->
+
+            <!-- 컨텐츠 영역 -->
+            <div class="con-body">
+                <!-- 회원 가입 정책 관리 -->
+                <div class="section">
+                    <div class="tit-box">
+                        <div class="tit">회원 가입 정책 관리</div>
+                    </div>
+                    <div class="table-box">
+                        <table class="table">
+                            <colgroup>
+                                <col style="width:150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="vt">가입연령제한설정</th>
+                                    <td>
+                                        <div class="inline-check block">
+                                            <span class="check">
+                                                <input type="radio" id="ck1-1" name="ck1" checked class="blind">
+                                                <label for="ck1-1">제한안함</label>
+                                            </span>
+                                            <span class="check">
+                                                <input type="radio" id="ck1-2" name="ck1" class="blind">
+                                                <label for="ck1-2">만 14세</label>
+                                                <select name="" id="">
+                                                    <option value="">가입불가</option>
+                                                </select>
+                                            </span>
+                                            <span class="check">
+                                                <input type="radio" id="ck1-3" name="ck1" class="blind">
+                                                <label for="ck1-3">만 19세</label>
+                                                <select name="" id="">
+                                                    <option value="">운영자 승인 후 가입가능</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>재가입기간제한설정</th>
+                                    <td>
+                                        회원탈퇴/삭제 후
+                                        <div class="input-box w120">
+                                            <div class="inner">
+                                                <div class="inp-txt">
+                                                    <span><input type="text" value="00"></span>
+                                                </div>
+                                                <div class="unit">일</div>
+                                            </div>
+                                        </div>
+                                        동안 재가입 불가
+                                        <span class="check ml10">
+                                            <input type="checkbox" id="member-ck" class="blind">
+                                            <label for="member-ck">사용안함</label>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="vt">가입불가회원아이디</th>
+                                    <td>
+                                        <textarea name="" id="" cols="30" rows="10" placeholder="회원가입을 제한할 아이디를 쉼표로 구분하여 입력하세요"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- // 회원 가입 정책 관리 -->
+                <div class="btn-box mt25">
+                    <div class="r">
+                        <a href="#n" class="btn w120 type1">저장하기</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- // 컨텐츠 영역 -->
+
+            <!--  레이어 컨텐츠 영역 -->
+            <div class="layer-content open">
+                <div class="con">
+                    <div class="tp">
+                        <div class="l">
+                            <div class="tt">회원정보</div>
+                        </div>
+                    </div>
+                    <div class="by">
+                        <div class="section">
+                            <div class="member_profile">
+                                <div class="img">
+                                    <img src="../../images/member_img01.png" alt="">
+                                </div>
+                                <div class="txt">
+                                    <span class="rank">Master</span>
+                                    <strong>Hello, 마릴린몬로<span>님</span></strong>
+                                    <span class="date">무료성형모델 신청일 : 2020.10.10</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="member_post_list">
+                                <ul>
+                                    <li>
+                                        <strong>11</strong>
+                                        <span>가상성형의뢰</span>
+                                    </li>
+                                    <li>
+                                        <strong>31</strong>
+                                        <span>이벤트 예약</span>
+                                    </li>
+                                    <li>
+                                        <strong>08</strong>
+                                        <span>상담예약</span>
+                                    </li>
+                                    <li>
+                                        <strong>16</strong>
+                                        <span>사진앨범</span>
+                                    </li>
+                                    <li>
+                                        <strong>10</strong>
+                                        <span>공개일지</span>
+                                    </li>
+                                    <li>
+                                        <strong>20</strong>
+                                        <span>등록한 일지</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <ul class="member_point_list">
+                                <li>
+                                    <div class="tit">
+                                        <span>2020.09.17</span>
+                                        <strong>수술일지 공개</strong>
+                                    </div>
+                                    <div class="point_num color-blue"><strong>+ 15000</strong>P</div>
+                                    <div class="point_con">
+                                        <div class="date">수술 받은 날 <strong class="ml5">2020.09.31</strong></div>
+                                        <div class="hash_tag">
+                                            <span># 눈매교정</span>
+                                            <span># 앞트임</span>
+                                            <span># 윤곽</span>
+                                        </div>
+                                        <p><strong class="name">박지훈 성형외과 전문의</strong> 바노바기성형외과 </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tit">
+                                        <span>2020.09.17</span>
+                                        <strong>이벤트결제</strong>
+                                    </div>
+                                    <div class="point_num color-pink"><strong>- 2000</strong>P</div>
+                                    <div class="point_con">
+                                        <div class="date">수술 받은 날 <strong class="ml5">2020.09.31</strong></div>
+                                        <div class="hash_tag">
+                                            <span># 눈매교정</span>
+                                            <span># 앞트임</span>
+                                            <span># 윤곽</span>
+                                        </div>
+                                        <p><strong class="name">박지훈 성형외과 전문의</strong> 바노바기성형외과 </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tit">
+                                        <span>2020.09.17</span>
+                                        <strong>무료성형모델</strong>
+                                    </div>
+                                    <div class="point_num color-purple"><strong>+ 35000</strong>P</div>
+                                    <div class="point_con">
+                                        <div class="date">수술 받은 날 <strong class="ml5">2020.09.31</strong></div>
+                                        <div class="hash_tag">
+                                            <span># 눈매교정</span>
+                                            <span># 앞트임</span>
+                                            <span># 윤곽</span>
+                                        </div>
+                                        <p><strong class="name">박지훈 성형외과 전문의</strong> 바노바기성형외과 </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="section">
+                            <ul class="member_beauty_list">
+                                <li>
+                                    <div class="con">
+                                        <div class="date">2020.03.26</div>
+                                        <div class="tit">상담일지 <span>공개</span></div>
+                                        <strong>바노바기 성형외과 차진수 대표원장</strong>
+                                        <div class="hash_tag">
+                                            <span># 눈매교정</span>
+                                            <span># 콧대높힘</span>
+                                            <span># 지방흡입</span>
+                                        </div>
+                                    </div>
+                                    <div class="like">
+                                        <span>좋아요 <strong>00</strong>건</span>
+                                        <span>조회 <strong>00</strong>건</span>
+                                        <span>관심 <strong>00</strong>건</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="con">
+                                        <div class="date">2020.03.26</div>
+                                        <div class="tit">상담일지 <span>공개</span></div>
+                                        <strong>바노바기 성형외과 차진수 대표원장</strong>
+                                        <div class="hash_tag">
+                                            <span># 눈매교정</span>
+                                            <span># 콧대높힘</span>
+                                            <span># 지방흡입</span>
+                                        </div>
+                                    </div>
+                                    <div class="like">
+                                        <span>좋아요 <strong>00</strong>건</span>
+                                        <span>조회 <strong>00</strong>건</span>
+                                        <span>관심 <strong>00</strong>건</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="con">
+                                        <div class="date">2020.03.26</div>
+                                        <div class="tit">상담일지 <span>비공개</span></div>
+                                        <strong>바노바기 성형외과 차진수 대표원장</strong>
+                                        <div class="hash_tag">
+                                            <span># 눈매교정</span>
+                                            <span># 콧대높힘</span>
+                                            <span># 지방흡입</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </div>
+
+                        <div class="btn-box mt25 sp10">
+                            <div class="r">
+                                <a href="#n" class="btn w120 type2" onclick="layerContentClose();return false;">목록</a>
+                                <a href="#n" class="btn w120 type1">저장하기</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#n" class="btn-layer-close" onclick="layerContentClose();return false;"><span class="blind">레이어 닫기</span></a>
+                </div>
+            </div>
+            <!-- // 레이어 컨텐츠 영역 -->
+
+
+
+            <!-- Copyright -->
+            <div class="copyright" include-html="../include/footer.html"></div>
+            <!-- // Copyright -->
+
+        </article>
+    </main>
+    <!-- // content -->
+
+</div>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

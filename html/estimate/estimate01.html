@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="../../css/style.css">
+<script src="../../js/includeHTML.js"></script>
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/ui.js"></script>
+<title>NATOO | Facial and Skin AI Platform</title>
+</head>
+<body>
+
+<div class="wrap">
+
+    <!-- LNB -->
+    <div class="header-left" include-html="../include/header.html"></div>
+    <!-- // LNB -->
+
+    <!-- content -->
+    <main class="container">
+        <article class="content">
+            <!-- Total, Today | 관리자 로그인 정보 -->
+            <div class="con-head" include-html="../include/login_info.html"></div>
+            <!-- // Total, Today | 관리자 로그인 정보 -->
+
+            <!-- 컨텐츠 영역 -->
+            <div class="con-body">
+                <!-- 검색 -->
+                <div class="section">
+                    <div class="tit-box">
+                        <div class="tit">가상성형견적/의료상담 관리</div>
+                        <div class="r-box">
+                            <select name="" id="" class="nor-select">
+                                <option value="">KOREAN</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-form">
+                        <table class="table">
+                            <colgroup>
+                                <col style="width: 110px;">
+                                <col>
+                                <col style="width: 110px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>신청일</th>
+                                    <td colspan="3">                                        
+                                        <div class="calendar-box mr20">
+                                            <span class="date-field"><input type="text" class="datepicker" style="width:74px" value="0000-00-00"></span>
+                                            <span class="sym">~</span>
+                                            <span class="date-field"><input type="text" class="datepicker" style="width:74px" value="0000-00-00"></span>
+                                        </div>
+                                        <div class="inline-btn sp3">
+                                            <a href="#n" class="btn w55 tab type1">오늘</a>
+                                            <a href="#n" class="btn w55 tab type1">7일</a>
+                                            <a href="#n" class="btn w55 tab type1">15일</a>
+                                            <a href="#n" class="btn w55 tab type1">1개월</a>
+                                            <a href="#n" class="btn w55 tab type1">3개월</a>
+                                            <a href="#n" class="btn w55 tab type1 active">전체</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>진행현황</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                            <option value="">접수</option>
+                                            <option value="">진행중</option>
+                                            <option value="">완료</option>
+                                        </select>
+                                    </td>
+                                    <th>신청구분</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                            <option value="">예측사진</option>
+                                            <option value="">합성사진</option>
+                                            <option value="">사용자편집</option>
+                                            <option value="">의료상담</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>검색어</th>
+                                    <td colspan="3">
+                                        <div class="search-field">
+                                            <span class="f">
+                                                <input type="text" placeholder="메세지를 입력해주세요.">
+                                            </span>
+                                            <span class="s">
+                                                <a href="#n" class="btn w55 type1">검색</a>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- // 검색 -->
+
+                <!-- 목록 -->
+                <div class="section">
+                    <div class="list-tb-top">
+                        <div class="l">
+                            <span class="list-total">
+                                총 건수  <strong>00</strong>건
+                            </span>
+                        </div>
+                        <div class="r">
+                            <select name="" id="" class="nor-select">
+                                <option value="">전체</option>
+                                <option value="">접수</option>
+                                <option value="">진행중</option>
+                                <option value="">완료</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-box">
+                        <table class="table list-table">
+                            <colgroup>
+                                <col style="width:35px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="all" class="blind">
+                                            <label for="all"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </th>
+                                    <th>신청구분</th>
+                                    <th>이름/닉네임</th>
+                                    <th>연락처</th>
+                                    <th>병원명</th>
+                                    <th>진행 현황</th>
+                                    <th>사진파일</th>
+                                    <th>신청일/완료일</th>
+                                    <th>방문예정일</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck1" class="blind" checked>
+                                            <label for="ck1"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>예측사진</td>
+                                    <td>
+                                        <a href="#n" onclick="layerContentOpen();return false;">
+                                            홍길순/마릴린몬로
+                                        </a>
+                                    </td>
+                                    <td>010-0000-0000</td>
+                                    <td>DDD 성형 외과 </td>
+                                    <td>접수</td>
+                                    <td><a href="#n" class="color-blue">[다운로드]</a></td>
+                                    <td>2020-09-28</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck2" class="blind">
+                                            <label for="ck2"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>합성사진</td>
+                                    <td>
+                                        <a href="#n" onclick="layerContentOpen();return false;">
+                                            홍길순/마릴린몬로
+                                        </a>
+                                    </td>
+                                    <td>010-0000-0000</td>
+                                    <td>AAA 성형 외과 </td>
+                                    <td>진행중</td>
+                                    <td><a href="#n" class="color-blue">[다운로드]</a></td>
+                                    <td>2020-09-28</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck3" class="blind">
+                                            <label for="ck3"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>사용자편집</td>
+                                    <td>
+                                        <a href="#n" onclick="layerContentOpen();return false;">
+                                            홍길순/마릴린몬로
+                                        </a>
+                                    </td>
+                                    <td>010-0000-0000</td>
+                                    <td>AAA 성형 외과 </td>
+                                    <td>완료</td>
+                                    <td><a href="#n" class="color-blue">[다운로드]</a></td>
+                                    <td>2020-09-28<br>2020-10-01</td>
+                                    <td></td>
+                                    <td>견적완료</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck4" class="blind">
+                                            <label for="ck4"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>의료상담</td>
+                                    <td>
+                                        <a href="#n" onclick="layerContentOpen();return false;">
+                                            홍길순/마릴린몬로
+                                        </a>
+                                    </td>
+                                    <td>010-0000-0000</td>
+                                    <td>AAA 성형 외과 </td>
+                                    <td>완료</td>
+                                    <td><a href="#n" class="color-blue">[다운로드]</a></td>
+                                    <td>2020-09-28<br>2020-10-01</td>
+                                    <td></td>
+                                    <td>회원완료</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn-box mt25 sp10">
+                        <div class="r">
+                            <a href="#n" class="btn w120 type2">선택완료</a>
+                            <a href="#n" class="btn w120 type1" onclick="layerPopupOpen('estimate_popup01');return false;">선택완료취소</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 목록 -->
+
+                <!-- 페이징 -->
+                <div class="pagination">
+                    <strong>1</strong>
+                    <a href="#n">2</a>
+                    <a href="#n">3</a>
+                    <a href="#n">4</a>
+                    <a href="#n">5</a>
+                </div>
+                <!-- // 페이징 -->
+
+            </div>
+            <!-- // 컨텐츠 영역 -->
+
+            <!-- 레이어 컨텐츠 영역 -->
+            <div class="layer-content">
+                <div class="con">
+                    <div class="tp">
+                        <div class="l">
+                            <div class="tt">가상견적 신청정보</div>
+                        </div>
+                    </div>
+                    <div class="by">
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">신청정보</div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 110px;">
+                                    <col>
+                                    <col style="width: 110px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>이름</th>
+                                        <td>홍길순</td>
+                                        <th>닉네임</th>
+                                        <td>마릴린몬로</td>
+                                    </tr>
+                                    <tr>
+                                        <th>첨부사진</th>
+                                        <td colspan="3">aaaa.Jpg</td>
+                                    </tr>
+                                    <tr>
+                                        <th>수술부위</th>
+                                        <td colspan="3">
+                                            <div class="hash_tag">
+                                                <span>#얼굴</span>
+                                                <span>#윤곽</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>연락처</th>
+                                        <td>010-0000-0000</td>
+                                        <th>메신저</th>
+                                        <td>kokoko@paypal.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 해외 추가 정보 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">해외 추가 정보</div>
+                                <div class="r-box">
+                                    <a href="#n" class="btn w55 type1 fold_btn">접기</a>
+                                </div>
+                            </div>
+                            <div class="table_fold">
+                                <table class="table">
+                                    <colgroup>
+                                        <col style="width: 110px;">
+                                        <col>
+                                        <col style="width: 110px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>상담신청일 </th>
+                                            <td>2020.09.31</td>
+                                            <th>연락받을시간 </th>
+                                            <td>아무때나</td>
+                                        </tr>
+                                        <tr>
+                                            <th>방문희망일</th>
+                                            <td>2020.10.10</td>
+                                            <th>방문가능시간</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>한국입국</th>
+                                            <td>2020.10.30</td>
+                                            <th>한국출국</th>
+                                            <td>202.10.30</td>
+                                        </tr>
+                                        <tr>
+                                            <th>교통편</th>
+                                            <td>픽업</td>
+                                            <th>수술후식사</th>
+                                            <td>Yes</td>
+                                        </tr>
+                                        <tr>
+                                            <th>항공권</th>
+                                            <td colspan="3">
+                                                <div class="img_wrap">
+                                                    <img src="../../images/ticket_img.jpg" alt="항공권 이미지">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- // 해외 추가 정보 -->
+                        
+                        <!-- 수술/시술경험/계획 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">수술/시술경험/계획</div>
+                                <div class="r-box">
+                                    <a href="#n" class="btn w55 type1 fold_btn">접기</a>
+                                </div>
+                            </div>
+                            <div class="table_fold"> 
+                                <table class="table">
+                                    <colgroup>
+                                        <col style="width: 110px;">
+                                        <col>
+                                        <col style="width: 110px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>수술/시술 경험  </th>
+                                            <td>있다(3회)</td>
+                                            <th>지금 현재<br>아픈 곳 </th>
+                                            <td>있다/빈혈</td>
+                                        </tr>
+                                        <tr>
+                                            <th>복용중 약물</th>
+                                            <td>있다/관절약</td>
+                                            <th>알러지</th>
+                                            <td>있다 / 스테로이드제</td>
+                                        </tr>
+                                        <tr>
+                                            <th>수술/시술계획</th>
+                                            <td>6개월 이내</td>
+                                            <th></th>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- // 수술/시술경험/계획 -->
+
+                        <!-- 완료처리 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">완료처리</div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 110px;">
+                                    <col>
+                                    <col style="width: 110px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>완료처리</th>
+                                        <td colspan="3" class="select">
+                                            <select name="" id="" onchange="selectChange(this)" class="select_change">
+                                                <option value="" selected disabled>상담선택</option>
+                                                <option value="estimate_reserve">방문예약</option>
+                                                <option value="estimate_tel">전화상담</option>
+                                                <option value="estimate_chat">채팅상담</option>
+                                                <option value="estimate_etc">기타</option>
+                                            </select>
+                                            <div id="estimate_reserve" class="select_con">
+                                                <div class="calendar-box">
+                                                    <span class="date-field"><input type="text" class="datepicker" style="width:74px" value="0000-00-00"></span>
+                                                </div>
+                                            </div>
+                                            <div id="estimate_etc" class="select_con etc_con">
+                                                <input type="text" placeholder="15자 이내로 작성하세요." style="width:100%;">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // 완료처리 -->
+
+                        <!-- 수술부위 및 방법 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">수술부위 및 방법</div>
+                                <div class="r-box">
+                                    <a href="#n" class="btn w55 type1">편집</a>
+                                </div>
+                            </div>
+                            <div class="txt_area">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="500자 이내로 입력하세요"></textarea>
+                            </div>
+                        </div>
+                        <!-- // 수술부위 및 방법 -->
+
+                        <!-- 상담관련 이미지 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">상담관련 이미지</div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <td>
+                                        <div class="img-thumbnail">
+                                            <ul>
+                                                <li>
+                                                    <div class="add-img-box">
+                                                        <input type="file" id="add_img1" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-box1')" class="blind">
+                                                        <label for="add_img1"><span class="blind">이미지 첨부</span></label>
+                
+                                                        <!-- 썸네일 이미지 등록 영역 -->
+                                                        <div id="img-box1" class="thum-img" onclick="orgImage(this);"></div>
+                                                        <!-- // 썸네일 이미지 등록 영역 -->
+                
+                                                        <!-- 이미지 삭제 버튼 -->
+                                                        <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_img1');return false;"><span class="blind">삭제</span></a>
+                                                        <!-- // 이미지 삭제 버튼 -->
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="add-img-box">
+                                                        <input type="file" id="add_img2" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-box2')" class="blind">
+                                                        <label for="add_img2"><span class="blind">이미지 첨부</span></label>
+                
+                                                        <!-- 썸네일 이미지 등록 영역 -->
+                                                        <div id="img-box2" class="thum-img" onclick="orgImage(this);"></div>
+                                                        <!-- // 썸네일 이미지 등록 영역 -->
+                
+                                                        <!-- 이미지 삭제 버튼 -->
+                                                        <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_img2');return false;"><span class="blind">삭제</span></a>
+                                                        <!-- // 이미지 삭제 버튼 -->
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="add-img-box">
+                                                        <input type="file" id="add_img3" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-box3')" class="blind">
+                                                        <label for="add_img3"><span class="blind">이미지 첨부</span></label>
+                
+                                                        <!-- 썸네일 이미지 등록 영역 -->
+                                                        <div id="img-box3" class="thum-img" onclick="orgImage(this);"></div>
+                                                        <!-- //  썸네일 이미지 등록 영역 -->
+                
+                                                        <!-- 이미지 삭제 버튼 -->
+                                                        <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_img3');return false;"><span class="blind">삭제</span></a>
+                                                        <!-- // 이미지 삭제 버튼 -->
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="add-img-box">
+                                                        <input type="file" id="add_img4" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-box4')" class="blind">
+                                                        <label for="add_img4"><span class="blind">이미지 첨부</span></label>
+                
+                                                        <!-- 썸네일 이미지 영역 -->
+                                                        <div id="img-box4" class="thum-img" onclick="orgImage(this);"></div>
+                                                        <!-- // 썸네일 이미지 영역 -->
+                
+                                                        <!-- 이미지 삭제 버튼 -->
+                                                        <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_img4');return false;"><span class="blind">삭제</span></a>
+                                                        <!-- // 이미지 삭제 버튼 -->
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="add-img-box">
+                                                        <input type="file" id="add_img5" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-box5')" class="blind">
+                                                        <label for="add_img5"><span class="blind">이미지 첨부</span></label>
+                
+                                                        <!-- 썸네일 이미지 등록 영역 -->
+                                                        <div id="img-box5" class="thum-img" onclick="orgImage(this);"></div>
+                                                        <!-- // 썸네일 이미지 등록 영역 -->
+                
+                                                        <!-- 이미지 삭제 버튼 -->
+                                                        <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_img5');return false;"><span class="blind">삭제</span></a>
+                                                        <!-- // 이미지 삭제 버튼 -->
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="add-img-box">
+                                                        <input type="file" id="add_img6" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-box6')" class="blind">
+                                                        <label for="add_img6"><span class="blind">이미지 첨부</span></label>
+                
+                                                        <!-- 썸네일 이미지 등록 영역 -->
+                                                        <div id="img-box6" class="thum-img" onclick="orgImage(this);"></div>
+                                                        <!-- // 썸네일 이미지 등록 영역 -->
+                
+                                                        <!-- 이미지 삭제 버튼 -->
+                                                        <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_img6');return false;"><span class="blind">삭제</span></a>
+                                                        <!-- // 이미지 삭제 버튼 -->
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- // 상담관련 이미지 -->
+
+                        <!-- 수술정보 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">수술정보</div>
+                                <div class="r-box">
+                                    <a href="#n" class="btn w105 type1" onclick="layerPopupOpen('estimate_popup02');return false;">수술부위선택</a>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 110px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2" class="vt">수술비용 <span class="color-blue">*</span></th>
+                                        <td>
+                                            정상가 <span class="color-pink price_txt">100</span>만원 / 할인금액 <span class="color-pink price_txt">10</span>만원 / 할인율 <span class="color-pink price_txt">10</span>% 
+                                            <p class="color-gray">수술비용 총액이 계산되어 나타납니다.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            # 진료부위 <span class="price_txt">20</span>만원 <br>
+                                            # 진료부위 <span class="price_txt">50</span>만원 <br>
+                                            # 진료부위 <span class="price_txt">30</span>만원 
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // 수술정보 -->
+
+                        <!-- 추천 이벤트 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">추천 이벤트 <strong class="nec">진행 중이거나 예정인 이벤트 정보를 올려주세요(나투앱에서 진행하는 이벤트만 가능)</strong></div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 110px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2" class="vt">이벤트 찾기</th>
+                                        <td>
+                                            <div class="inline-check vm">
+                                                <span class="check">
+                                                    <input type="radio" id="estimateck1-1" name="estimateck1" checked class="blind">
+                                                    <label for="estimateck1-1">진행중</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="estimateck1-2" name="estimateck1" class="blind">
+                                                    <label for="estimateck1-2">진행예정</label>
+                                                </span>
+                                            </div>
+                                            <div class="select_btn">
+                                                <a href="#n">이벤트를 선택하세요</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            # 선택된 이벤트명이 나타납니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // 추천 이벤트 -->
+
+                        <!-- 추천 리뷰 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">추천 리뷰 <strong class="nec">AI 추천 선택 시 최근 1년 이내 좋아요 상위 3건이 자동으로 제공됩니다.</strong></div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 110px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2" class="vt">리뷰 찾기</th>
+                                        <td>
+                                            <div class="inline-check vm">
+                                                <span class="check">
+                                                    <input type="radio" id="estimateck2-1" name="estimateck2" checked class="blind">
+                                                    <label for="estimateck2-1">AI 추천</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="estimateck1-2" name="estimateck2" class="blind">
+                                                    <label for="estimateck2-2">직접선택</label>
+                                                </span>
+                                            </div>
+                                            <div class="select_btn">
+                                                <a href="#n">리뷰를 선택하세요</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            # 선택된 리뷰명이 나타납니다.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // 추천 리뷰 -->
+
+                        <!-- 수술전후 사진 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">수술전후 사진 <strong class="nec">AI 추천 선택 시 등록된 수술전후 사진 정보가 자동으로 제공됩니다.</strong></div>
+                                <div class="r-box">
+                                    <a href="#n" class="btn w105 type1">홍보사진 선택</a>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 140px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2" class="vt">수술전후사진 찾기
+                                            </th>
+                                        <td>
+                                            <div class="inline-check vm">
+                                                <span class="check">
+                                                    <input type="radio" id="estimateck3-1" name="estimateck3" checked class="blind">
+                                                    <label for="estimateck3-1">AI 추천</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="estimateck3-2" name="estimateck3" class="blind">
+                                                    <label for="estimateck3-2">직접선택</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 임상사진 -->
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 120px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" class="op-sub-tit">임상사진</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">수술 전</th>
+                                        <td>
+                                            <div class="img-thumbnail op-pic-thum">
+                                                <ul>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img1-1" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op1-1')" class="blind">
+                                                            <label for="op-img1-1"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op1-1" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check1-1" class="blind" checked="">
+                                                                <label for="op-check1-1"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img1-1');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">정면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img1-2" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op1-2')" class="blind">
+                                                            <label for="op-img1-2"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op1-2" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check1-2" class="blind" checked="">
+                                                                <label for="op-check1-2"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img1-2');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">좌측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img1-3" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op1-3')" class="blind">
+                                                            <label for="op-img1-3"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op1-3" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- //  썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check1-3" class="blind" checked="">
+                                                                <label for="op-check1-3"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img1-3');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">우측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img1-4" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op1-4')" class="blind">
+                                                            <label for="op-img1-4"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 영역 -->
+                                                            <div id="img-op1-4" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check1-4" class="blind" checked="">
+                                                                <label for="op-check1-4"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img1-4');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">좌반측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img1-5" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op1-5')" class="blind">
+                                                            <label for="op-img1-5"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op1-5" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check1-5" class="blind" checked="">
+                                                                <label for="op-check1-5"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img1-5');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">우반측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img1-6" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op1-6')" class="blind">
+                                                            <label for="op-img1-6"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op1-6" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check1-6" class="blind" checked="">
+                                                                <label for="op-check1-6"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img1-6');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">상반</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img1-7" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op1-7')" class="blind">
+                                                            <label for="op-img1-7"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op1-7" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check1-7" class="blind" checked="">
+                                                                <label for="op-check1-7"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img1-7');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">하반</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">수술 후</th>
+                                        <td>
+                                            <div class="img-thumbnail op-pic-thum">
+                                                <ul>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img2-1" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op2-1')" class="blind">
+                                                            <label for="op-img2-1"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op2-1" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check2-1" class="blind" checked="">
+                                                                <label for="op-check2-1"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img2-1');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">정면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img2-2" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op2-2')" class="blind">
+                                                            <label for="op-img2-2"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op2-2" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check2-2" class="blind" checked="">
+                                                                <label for="op-check2-2"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img2-2');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">좌측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img2-3" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op2-3')" class="blind">
+                                                            <label for="op-img2-3"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op2-3" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- //  썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check2-3" class="blind" checked="">
+                                                                <label for="op-check2-3"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img2-3');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">우측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img2-4" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op2-4')" class="blind">
+                                                            <label for="op-img2-4"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 영역 -->
+                                                            <div id="img-op2-4" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check2-4" class="blind" checked="">
+                                                                <label for="op-check2-4"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img2-4');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">좌반측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img2-5" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op2-5')" class="blind">
+                                                            <label for="op-img2-5"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op2-5" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check2-5" class="blind" checked="">
+                                                                <label for="op-check2-5"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img2-5');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">우반측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img2-6" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op2-6')" class="blind">
+                                                            <label for="op-img2-6"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op2-6" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check2-6" class="blind" checked="">
+                                                                <label for="op-check2-6"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img2-6');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">상반</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img2-7" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op2-7')" class="blind">
+                                                            <label for="op-img2-7"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op2-7" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check2-7" class="blind" checked="">
+                                                                <label for="op-check2-7"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img2-7');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">하반</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- // 임상사진 -->
+
+                            <!-- 프로필 사진 -->
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 120px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" class="op-sub-tit">프로필 사진</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">수술 전</th>
+                                        <td>
+                                            <div class="img-thumbnail op-pic-thum">
+                                                <ul>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img3-1" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op3-1')" class="blind">
+                                                            <label for="op-img3-1"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op3-1" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check3-1" class="blind" checked="">
+                                                                <label for="op-check3-1"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img3-1');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">정면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img3-2" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op3-2')" class="blind">
+                                                            <label for="op-img3-2"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op3-2" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check3-2" class="blind" checked="">
+                                                                <label for="op-check3-2"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img3-2');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">좌측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img3-3" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op3-3')" class="blind">
+                                                            <label for="op-img3-3"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op3-3" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- //  썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check3-3" class="blind" checked="">
+                                                                <label for="op-check3-3"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img3-3');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">우측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img3-4" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op3-4')" class="blind">
+                                                            <label for="op-img3-4"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 영역 -->
+                                                            <div id="img-op3-4" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check3-4" class="blind" checked="">
+                                                                <label for="op-check3-4"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img3-4');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">좌반측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img3-5" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op3-5')" class="blind">
+                                                            <label for="op-img3-5"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op3-5" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check3-5" class="blind" checked="">
+                                                                <label for="op-check3-5"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img3-5');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">우반측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img3-6" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op3-6')" class="blind">
+                                                            <label for="op-img3-6"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op3-6" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check3-6" class="blind" checked="">
+                                                                <label for="op-check3-6"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img3-6');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">상반</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img3-7" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op3-7')" class="blind">
+                                                            <label for="op-img3-7"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op3-7" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check3-7" class="blind" checked="">
+                                                                <label for="op-check3-7"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img3-7');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">하반</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">수술 후</th>
+                                        <td>
+                                            <div class="img-thumbnail op-pic-thum">
+                                                <ul>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img4-1" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op4-1')" class="blind">
+                                                            <label for="op-img4-1"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op4-1" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check4-1" class="blind" checked="">
+                                                                <label for="op-check4-1"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img4-1');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">정면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img4-2" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op4-2')" class="blind">
+                                                            <label for="op-img4-2"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op4-2" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check4-2" class="blind" checked="">
+                                                                <label for="op-check4-2"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img4-2');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">좌측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img4-3" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op4-3')" class="blind">
+                                                            <label for="op-img4-3"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op4-3" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- //  썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check4-3" class="blind" checked="">
+                                                                <label for="op-check4-3"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img4-3');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">우측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img4-4" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op4-4')" class="blind">
+                                                            <label for="op-img4-4"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 영역 -->
+                                                            <div id="img-op4-4" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check4-4" class="blind" checked="">
+                                                                <label for="op-check4-4"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img4-4');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">좌반측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img4-5" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op4-5')" class="blind">
+                                                            <label for="op-img4-5"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op4-5" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check4-5" class="blind" checked="">
+                                                                <label for="op-check4-5"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img4-5');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">우반측면</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img4-6" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op4-6')" class="blind">
+                                                            <label for="op-img4-6"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op4-6" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check4-6" class="blind" checked="">
+                                                                <label for="op-check4-6"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img4-6');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">상반</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="add-img-box">
+                                                            <input type="file" id="op-img4-7" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-op4-7')" class="blind">
+                                                            <label for="op-img4-7"><span class="blind">이미지 첨부</span></label>
+                    
+                                                            <!-- 썸네일 이미지 등록 영역 -->
+                                                            <div id="img-op4-7" class="thum-img" onclick="orgImage(this);"></div>
+                                                            <!-- // 썸네일 이미지 등록 영역 -->
+
+                                                            <!-- 수술 이미지 선택 -->
+                                                            <span class="check-single pic-check">
+                                                                <input type="checkbox" id="op-check4-7" class="blind" checked="">
+                                                                <label for="op-check4-7"><span class="blind">이미지 선택</span></label>
+                                                            </span>
+                                                            <!-- // 수술 이미지 선택 -->
+                    
+                                                            <!-- 이미지 삭제 버튼 -->
+                                                            <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'op-img4-7');return false;"><span class="blind">삭제</span></a>
+                                                            <!-- // 이미지 삭제 버튼 -->
+                                                        </div>
+                                                        <div class="thum-txt">하반</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- // 프로필 사진 -->
+                        </div>
+                        <!-- // 수술전후 사진 -->
+
+                        <div class="btn-box mt25 sp10">
+                            <div class="r">
+                                <a href="#n" class="btn w120 type2" onclick="layerContentClose();return false;">목록</a>
+                                <a href="#n" class="btn w120 type1">저장하기</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#n" class="btn-layer-close" onclick="layerContentClose();return false;"><span class="blind">레이어 닫기</span></a>
+                </div>
+            </div>
+            <!-- // 레이어 컨텐츠 영역 -->
+
+            <!-- 원본 이미지 보기 팝업 -->
+            <div class="layer-popup" data-popup="image-popup">
+                <div class="tp">사진 크게 보기</div>
+                <div class="by">
+                    <div class="org-size"></div>
+                </div>
+                <div class="btn-popup">
+                    <a href="#n" class="btn w200 type2" onclick="layerPopupClose('image-popup');return false;">닫기</a>
+                </div>
+            </div>
+            <!-- // 원본 이미지 보기 팝업 -->
+
+            <!-- 완료처리 레이어 팝업 -->
+            <div class="layer-popup w480" data-popup="estimate_popup01">
+                <div class="tp">완료처리</div>
+                <div class="by">
+                    <div class="layer-select">
+                        <select name="" id="" onchange="selectChange(this)">
+                            <option value="" selected disabled>상담선택</option>
+                            <option value="reserve">방문예약</option>
+                            <option value="tel">전화상담</option>
+                            <option value="chat">채팅상담</option>
+                            <option value="etc">기타</option>
+                        </select> 
+                        <div id="reserve" class="select_con">
+                            <div class="calendar-box">
+                                <span class="date-field"><input type="text" class="datepicker" style="width:74px" value="0000-00-00"></span>
+                            </div>
+                        </div>
+                        <div id="etc" class="select_con etc_con">
+                           <input type="text" placeholder="15자 이내로 작성하세요." style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-popup mt0">
+                    <a href="#n" class="btn w200 type2" onclick="layerPopupClose('estimate_popup01');return false;">취소</a>
+                    <a href="#n" class="btn w200 type3" onclick="layerPopupClose('estimate_popup01');return false;">저장</a>
+                </div>
+            </div>
+            <!-- // 완료처리 레이어 팝업 -->
+
+            <!-- 수술부위 및 비용등록 선택 레이어 팝업 -->
+            <div class="layer-popup w840" data-popup="estimate_popup02">
+                <div class="tp">수술부위 및 비용등록 선택</div>
+                <div class="by">
+                    <div class="medical-select">
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">눈</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">눈</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">쌍커풀</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">첫수술</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn-box mt25">
+                        <div class="r">
+                            <a href="#n" class="btn w85 type1">선택</a>
+                        </div>
+                    </div>
+                    <div class="medical-select-list">
+                        <ul class="list04">
+                            <li>
+                                <div class="l">
+                                    <span class="medical-selected">
+                                        눈
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        코
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        피부
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        지방흡입
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                </div>
+                                <div class="r">
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">정가</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20">30</span>
+                                            </div>
+                                            <div class="unit">만원</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">할인율</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20">50</span>
+                                            </div>
+                                            <div class="unit">%</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">할인금액</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20 color-pink">15</span>
+                                            </div>
+                                            <div class="unit">만원</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="l">
+                                    <span class="medical-selected">
+                                        눈
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        코
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        피부
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        지방흡입
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                </div>
+                                <div class="r">
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">정가</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20">30</span>
+                                            </div>
+                                            <div class="unit">만원</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">할인율</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20">50</span>
+                                            </div>
+                                            <div class="unit">%</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">할인금액</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20 color-pink">15</span>
+                                            </div>
+                                            <div class="unit">만원</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="l">
+                                    <span class="medical-selected">
+                                        눈
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        코
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        피부
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        지방흡입
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                </div>
+                                <div class="r">
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">정가</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20">30</span>
+                                            </div>
+                                            <div class="unit">만원</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">할인율</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20">50</span>
+                                            </div>
+                                            <div class="unit">%</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">할인금액</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20 color-pink">15</span>
+                                            </div>
+                                            <div class="unit">만원</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-popup">
+                    <a href="#n" class="btn w200 type2" onclick="layerPopupClose('estimate_popup02');return false;">취소</a>
+                    <a href="#n" class="btn w200 type3" onclick="layerPopupClose('estimate_popup02');return false;">등록하기</a>
+                </div>
+            </div>
+            <!-- // 수술부위 및 비용등록 선택 레이어 팝업 -->
+
+            <!-- Copyright -->
+            <div class="copyright" include-html="../include/footer.html"></div>
+            <!-- // Copyright -->
+
+        </article>
+    </main>
+    <!-- // content -->
+    <script>
+        $('.fold_btn').click(function(){
+            if($(this).text() == '접기'){
+                $(this).text('더보기');
+            }
+            else {
+                $(this).text('접기');
+            }
+            
+            $(this).parents('.tit-box').siblings('.table_fold').slideToggle();
+        });
+    </script>
+</div>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

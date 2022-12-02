@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+.check-single, .btn-radio {
+    display: inline-block;
+    vertical-align: top;
+
+    > input[type=checkbox]:checked + label::before, input[type=radio]:checked + label::before {
+        opacity: 1;
+    }
+
+    > label {
+        display: inline-block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #EBEBEB;
+
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: .2s ease;
+            width: 16px;
+            height: 16px;
+            background: url(../images/input_arrow.png) no-repeat 50% 50%;
+        }
+    }
+}
+
+.check {
+    display: inline-block;
+    font-size: 13px;
+
+    > input[type=radio]:checked + label, > input[type=checkbox]:checked + label {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    > label {
+        display: inline-block;
+        position: relative;
+        padding-left: 22px;
+
+        &::before, &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1px;
+            width: 16px;
+            height: 16px;
+        }
+
+        &::before {
+            border-radius: 50%;
+            background: #EBEBEB;
+        }
+
+        &::after {
+            transition: .2s ease;
+            opacity: 0;
+            border-radius: 50%;
+            background: url(../images/input_arrow.png) no-repeat 50% 50%;
+        }
+    }
+}
+
+.inline-check {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+
+    > .check:not(:first-child) {
+        margin-left: 22px;
+    }
+}
+
+.search-form {
+    margin-bottom: 28px;
+}
+
+select {
+    width: 180px;
+    height: 23px;
+    padding: 0 50px 6px 10px;
+    border-bottom: 1px solid #707070;
+    background-color: #FAFAFA;
+    background-image: url(../images/bg_select_arrow.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) 5px;
+    background-color: transparent;
+    vertical-align: top;
+    font-weight: 400;
+    font-family: inherit;
+    color: #707070;
+}
+
+.nor-select {
+    width: auto;
+    padding: 0 25px 0 10px;
+    border-bottom: 0;
+    background-position: 100% 8px;
+    background-image: url(../images/bg_select_arrow2.png);
+}
+
+input {
+    &[type=text], &[type=password] {
+        height: 23px;
+        border-bottom: 1px solid #707070;
+        background: #FAFAFA;
+        vertical-align: top;
+        font-weight: 400;
+        font-size: 13px;
+        font-family: inherit;
+        color: #707070;
+    }
+}
+
+.calendar-box {
+    display: inline-block;
+    vertical-align: top;
+    
+    > span {
+        display: inline-block;
+    }
+
+    > .date-field {
+        position: relative;
+
+        > .ui-datepicker-trigger {
+            width: 14px;
+            height: 14px;
+            background: url(../images/btn_datepicker.png) no-repeat 0 0;
+            vertical-align: 3px;
+            font-size: 0;
+        }
+    }
+
+    > .sym {
+        margin: 0 3px;
+    }
+
+    .datepicker {
+        border-bottom: 0;
+    }
+}
+
+.search-field {
+    &::after {
+        @include clearFix;
+    }
+
+    > .f {
+        float: left;
+        position: relative;
+        width: calc(100% - 70px);
+
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 1px;
+            height: 13px;
+            background: #646464;
+        }
+
+        > input[type=text] {
+            width: 100%;
+            padding-left: 20px;
+            border-bottom: 0;
+        }
+    }
+
+    > .s {
+        float: right;
+    }
+}
+
+.inline-btn {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    
+    > a:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+
+
+.input-box {
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #707070;
+    vertical-align: top;
+    > .inner {
+        display: table;
+        table-layout: auto;
+        width: 100%;
+
+        > div {
+            display: table-cell;
+
+            input[type=text] {
+                width: 100%;
+                height: auto;
+                border: 0;
+                vertical-align: baseline;
+                text-align: right;
+                letter-spacing: inherit;
+                color: inherit;
+            }
+        }
+
+        > .l {
+            width: 1%;
+        }
+
+        > .inp-txt {
+            width: 98%;
+            padding-right: 3px;
+            text-align: right;
+            letter-spacing:0;
+            color: #959595;
+        }
+
+        > .unit {
+            width: 1%;
+            padding-right: 3px;
+        }
+    }
+
+    &.w80 {
+        width: 80px;
+    }
+
+    &.w90 {
+        width: 90px;
+    }
+
+    &.w120 {
+        width: 120px;
+    }
+}

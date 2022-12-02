@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="../../css/style.css">
+<script src="../../js/includeHTML.js"></script>
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/ui.js"></script>
+<title>NATOO | Facial and Skin AI Platform</title>
+</head>
+<body>
+
+<div class="wrap">
+
+    <!-- LNB -->
+    <div class="header-left" include-html="../include/header.html"></div>
+    <!-- // LNB -->
+
+    <!-- content -->
+    <main class="container">
+        <article class="content">
+            <!-- Total, Today | 관리자 로그인 정보 -->
+            <div class="con-head" include-html="../include/login_info.html"></div>
+            <!-- // Total, Today | 관리자 로그인 정보 -->
+
+            <!-- 컨텐츠 영역 -->
+            <div class="con-body">
+                <!-- 이벤트 현황 -->
+                <div class="section">
+                    <div class="tit-box">
+                        <div class="tit">이벤트 현황</div>
+                        <div class="r-box">
+                            <select name="" id="" class="nor-select">
+                                <option value="">KOREAN</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-form">
+                        <table class="table">
+                            <colgroup>
+                                <col style="width: 110px;">
+                                <col>
+                                <col style="width: 110px;">
+                                <col>
+                                <col style="width: 110px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>기간선택</th>
+                                    <td colspan="5">
+                                        <select name="" id="" class="mr10">
+                                            <option value="">전체</option>
+                                            <option value="">등록일</option>
+                                            <option value="">종료일</option>
+                                        </select>
+                                        <div class="calendar-box mr20">
+                                            <span class="date-field"><input type="text" class="datepicker" style="width:74px" value="0000-00-00"></span>
+                                            <span class="sym">~</span>
+                                            <span class="date-field"><input type="text" class="datepicker" style="width:74px" value="0000-00-00"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>진행현황</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                            <option value="">진행중</option>
+                                            <option value="">진행예정</option>
+                                            <option value="">종료</option>
+                                        </select>
+                                    </td>
+                                    <th>예약금여부</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                            <option value="">적용</option>
+                                            <option value="">미적용</option>
+                                        </select>
+                                    </td>
+                                    <th>수술분야</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">전체</option>
+                                            <option value="">눈</option>
+                                            <option value="">코</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>검색어</th>
+                                    <td colspan="5">
+                                        <div class="search-field select">
+                                            <select name="" id="">
+                                                <option value="">이벤트명</option>
+                                                <option value="">병원명</option>
+                                            </select>
+                                            <span class="f">
+                                                <input type="text" placeholder="메세지를 입력해주세요.">
+                                            </span>
+                                            <span class="s">
+                                                <a href="#n" class="btn w55 type1">검색</a>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- // 이벤트 현황 -->
+
+                <!-- 목록 -->
+                <div class="section">
+                    <div class="list-tb-top">
+                        <div class="l">
+                            <span class="list-total">
+                                검색결과  <strong>00</strong>건
+                            </span>
+                        </div>
+                        <div class="r">
+                            <select name="" id="" class="nor-select">
+                                <option value="">전체</option>
+                            </select>
+                            <div class="inline-btn sp5 ml10">
+                                <a href="#n" class="btn w55 tab type1 active">진행중</a>
+                                <a href="#n" class="btn w55 tab type1">진행예정</a>
+                                <a href="#n" class="btn w55 tab type1">종료</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-box">
+                        <table class="table list-table">
+                            <colgroup>
+                                <col style="width:35px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="all" class="blind">
+                                            <label for="all"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </th>
+                                    <th>대표 이미지</th>
+                                    <th>제목</th>
+                                    <th>수술분야</th>
+                                    <th>이벤트 기간</th>
+                                    <th>상담예약</th>
+                                    <th>조회수/ 좋아요</th>
+                                    <th>예약금</th>
+                                    <th>등록일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck1" class="blind">
+                                            <label for="ck1"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <a href="#n" onclick="layerContentOpen();return false;">
+                                            <div class="banner_img">
+                                                <span class="rec">추천</span>
+                                                <img src="../../images/test_img.jpg" alt="">
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td><a href="#n" onclick="layerContentOpen();return false;">바노바기성형외과 20주년 기념 이벤트</a></td>
+                                    <td>전체</td>
+                                    <td>2020.10.01 00:00<br>2020.12.31 00:00</td>
+                                    <td>00건 <br><a href="#n" class="color-blue">관리</a></td>
+                                    <td>000</td>
+                                    <td>1,000,000 <br><a href="#n" class="color-blue">관리</a></td>
+                                    <td>2020.09.21</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck2" class="blind">
+                                            <label for="ck2"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <a href="#n" onclick="layerContentOpen();return false;">
+                                            <div class="banner_img">
+                                                <span class="rec">추천</span>
+                                                <img src="../../images/test_img.jpg" alt="">
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td><a href="#n" onclick="layerContentOpen();return false;">눈, 매몰, 앞트임, 코높임</a></td>
+                                    <td>피부</td>
+                                    <td>2020.10.01 00:00<br>2020.12.31 00:00</td>
+                                    <td>00건 <br><a href="#n" class="color-blue">관리</a></td>
+                                    <td>000</td>
+                                    <td>1,000,000 <br><a href="#n" class="color-blue">관리</a></td>
+                                    <td>2020.09.21</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck3" class="blind">
+                                            <label for="ck3"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td><a href="#n" onclick="layerContentOpen();return false;">
+                                        <div class="banner_img"><img src="../../images/test_img.jpg" alt=""></div>
+                                    </a></td>
+                                    <td><a href="#n" onclick="layerContentOpen();return false;">바노바기성형외과 20주년 기념 이벤트</a></td>
+                                    <td>반영구</td>
+                                    <td>2020.10.01 00:00<br>2020.12.31 00:00</td>
+                                    <td>00건 <br><a href="#n" class="color-blue">관리</a></td>
+                                    <td>000</td>
+                                    <td>1,000,000 <br><a href="#n" class="color-blue">관리</a></td>
+                                    <td>2020.09.21</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck4" class="blind">
+                                            <label for="ck4"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td><a href="#n" onclick="layerContentOpen();return false;">
+                                        <div class="banner_img"><img src="../../images/test_img.jpg" alt=""></div>
+                                    </a></td>
+                                    <td><a href="#n" onclick="layerContentOpen();return false;">바노바기성형외과 20주년 기념 이벤트</a></td>
+                                    <td>전체</td>
+                                    <td>2020.10.01 00:00<br>2020.12.31 00:00</td>
+                                    <td>00건 <br><a href="#n" class="color-blue">관리</a></td>
+                                    <td>000</td>
+                                    <td>1,000,000 <br><a href="#n" class="color-blue">관리</a></td>
+                                    <td>2020.09.21</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn-box mt25">
+                        <div class="l">
+                            <div class="inline-btn sp5">
+                                <a href="#n" class="btn w85 tab type1">선택 노출</a>
+                                <a href="#n" class="btn w85 tab type1">선택 비노출</a>
+                            </div>
+                        </div>
+                        <div class="r">
+                            <a href="#n" class="btn w120 type1" onclick="layerContentOpen();return false;">등록하기</a>
+                        </div>
+                    </div>
+
+                    <!-- 페이징 -->
+                    <div class="pagination">
+                        <strong>1</strong>
+                        <a href="#n">2</a>
+                        <a href="#n">3</a>
+                        <a href="#n">4</a>
+                        <a href="#n">5</a>
+                    </div>
+                    <!-- // 페이징 -->
+
+                </div>
+                <!-- // 목록 -->
+            </div>
+            <!-- // 컨텐츠 영역 -->
+
+            <!--  레이어 컨텐츠 영역 -->
+            <div class="layer-content">
+                <div class="con">
+                    <div class="tp">
+                        <div class="l">
+                            <div class="tt">이벤트 등록</div>
+                        </div>
+                    </div>
+                    <div class="by">
+                        <!-- 기본정보 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">기본정보</div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 140px;">
+                                    <col>
+                                    <col style="width: 140px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>이벤트명</th>
+                                        <td colspan="3"><input type="text" style="width:180px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>시작일</th>
+                                        <td>
+                                            <div class="calendar-box">
+                                                <span class="date-field"><input type="text" class="datepicker" style="width:74px" value="0000-00-00"></span>
+                                            </div>
+                                        </td>
+                                        <th>종료일</th>
+                                        <td>
+                                            <div class="calendar-box">
+                                                <span class="date-field"><input type="text" class="datepicker" style="width:74px" value="0000-00-00"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>공개여부</th>
+                                        <td colspan="3">
+                                            <div class="inline-check">
+                                                <span class="check">
+                                                    <input type="radio" id="eventck1-1" name="eventck1" checked class="blind">
+                                                    <label for="eventck1-1">공개</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="eventck1-2" name="eventck1" class="blind">
+                                                    <label for="eventck1-2">비공개</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2" class="vt">수술분야</th>
+                                        <td colspan="3">
+                                            <div class="inline-check vm">
+                                                <span class="check">
+                                                    <input type="radio" id="eventck2-1" name="eventck2" checked class="blind">
+                                                    <label for="eventck2-1">전체</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="eventck2-2" name="eventck2" class="blind">
+                                                    <label for="eventck2-2">수술분야 선택</label>
+                                                </span>
+                                            </div>
+                                            <div class="select_btn">
+                                                <a href="#" onclick="layerPopupOpen('event_popup');return false;">수술분야 선택</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <div class="hash_tag">
+                                                <span>#얼굴</span>
+                                                <span>#윤곽</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">간략소개</th>
+                                        <td colspan="3">
+                                            <textarea name="" id="" cols="30" rows="10" placeholder="사용자화면 목록에 제공되는 소개내용을 입력해주세요(150자 이내)"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">이벤트 대표배너</th>
+                                        <td colspan="3">
+                                            <div class="add-img-box file-single">
+                                                <input type="file" id="add_single" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'img-box8')" class="blind">
+                                                <label for="add_single"><span class="blind">이미지 첨부</span></label>
+                    
+                                                <!-- 썸네일 이미지 등록 영역 -->
+                                                <div id="img-box8" class="thum-img" onclick="orgImage(this);"></div>
+                                                <!-- // 썸네일 이미지 등록 영역 -->
+                    
+                                                <!-- 이미지 삭제 버튼 -->
+                                                <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_single');return false;"><span class="blind">삭제</span></a>
+                                                <!-- // 이미지 삭제 버튼 -->
+                                            </div>
+                                            <div class="thum-txt">권장 사이즈 가로 0000px, 세로 0000px</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // 기본정보 -->
+
+                        <!-- // 가격정보 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">가격정보</div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 140px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2" class="vt">예약금여부</th>
+                                        <td>
+                                            <div class="inline-check">
+                                                <span class="check">
+                                                    <input type="radio" id="eventck3-1" name="eventck3" checked class="blind">
+                                                    <label for="eventck3-1">적용</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="eventck3-2" name="eventck3" class="blind">
+                                                    <label for="eventck3-2">미적용</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="inline-check block">
+                                                <span class="check">
+                                                    <input type="radio" id="eventck4-1" name="eventck4" checked class="blind">
+                                                    <label for="eventck4-1">전체설정</label>
+                                                    전체 금액의 
+                                                    <div class="input-box w80">
+                                                        <div class="inner">
+                                                            <div class="inp-txt">
+                                                                <span><input type="text" value="10"></span>
+                                                            </div>
+                                                            <div class="unit">%</div>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="eventck4-2" name="eventck4" class="blind">
+                                                    <label for="eventck4-2">개별설정</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">가격설정 <a href="#n" class="btn w55 tab type1 vb">VAT포함</a></th>
+                                        <td>
+                                            <div>
+                                                <input type="text" style="width:180px;" placeholder="#진료부위">
+                                                <span class="ml20">정상가</span>
+                                                <div class="input-box w80">
+                                                    <div class="inner">
+                                                        <div class="inp-txt">
+                                                            <span><input type="text" value="10"></span>
+                                                        </div>
+                                                        <div class="unit">%</div>
+                                                    </div>
+                                                </div>
+                                                <span class="ml20">할인금액</span>
+                                                <div class="input-box w80">
+                                                    <div class="inner">
+                                                        <div class="inp-txt">
+                                                            <span><input type="text" value="10"></span>
+                                                        </div>
+                                                        <div class="unit">%</div>
+                                                    </div>
+                                                </div>
+                                                <span class="ml20">할인율</span>
+                                                <span class="price_txt color-pink">100</span>%
+                                            </div>
+                                            <div class="mt5">
+                                                <input type="text" style="width:180px;" placeholder="#진료부위">
+                                                <span class="ml20">정상가</span>
+                                                <div class="input-box w80">
+                                                    <div class="inner">
+                                                        <div class="inp-txt">
+                                                            <span><input type="text" value="10"></span>
+                                                        </div>
+                                                        <div class="unit">%</div>
+                                                    </div>
+                                                </div>
+                                                <span class="ml20">할인금액</span>
+                                                <div class="input-box w80">
+                                                    <div class="inner">
+                                                        <div class="inp-txt">
+                                                            <span><input type="text" value="10"></span>
+                                                        </div>
+                                                        <div class="unit">%</div>
+                                                    </div>
+                                                </div>
+                                                <span class="ml20">할인율</span>
+                                                <span class="price_txt color-pink">100</span>%
+                                            </div>
+                                            <div class="mt5">
+                                                <input type="text" style="width:180px;" placeholder="#진료부위">
+                                                <span class="ml20">정상가</span>
+                                                <div class="input-box w80">
+                                                    <div class="inner">
+                                                        <div class="inp-txt">
+                                                            <span><input type="text" value="10"></span>
+                                                        </div>
+                                                        <div class="unit">%</div>
+                                                    </div>
+                                                </div>
+                                                <span class="ml20">할인금액</span>
+                                                <div class="input-box w80">
+                                                    <div class="inner">
+                                                        <div class="inp-txt">
+                                                            <span><input type="text" value="10"></span>
+                                                        </div>
+                                                        <div class="unit">%</div>
+                                                    </div>
+                                                </div>
+                                                <span class="ml20">할인율</span>
+                                                <span class="price_txt color-pink">100</span>%
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // 가격정보 -->
+
+                        <!--  이벤트 내용 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">이벤트 내용</div>
+                                <div class="r-box">
+                                    <a href="#" class="btn w55 type1">편집</a>
+                                </div>
+                            </div>
+                            <div class="txt_area">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="이벤트 내용"></textarea>
+                            </div>
+                        </div>
+                        <!-- // 이벤트 내용 -->
+
+                        <!--  이벤트 배너광고 설정 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">이벤트 배너광고 설정</div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 140px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>메인</th>
+                                        <td>
+                                            <div class="inline-check">
+                                                <span class="check">
+                                                    <input type="radio" id="eventck5-1" name="eventck5" checked class="blind">
+                                                    <label for="eventck5-1">배너 광고 영역</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="eventck5-2" name="eventck5" class="blind">
+                                                    <label for="eventck5-2">추천 이벤트</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>서브 카테고리</th>
+                                        <td>
+                                            <div class="inline-check">
+                                                <span class="check">
+                                                    <input type="radio" id="eventck6-1" name="eventck6" checked class="blind">
+                                                    <label for="eventck6-1">추천 이벤트</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="eventck6-2" name="eventck6" class="blind">
+                                                    <label for="eventck6-2">하단 AD  영역</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--  // 이벤트 배너광고 설정 -->
+
+                        <!--  노출위치별 배너이미지 등록 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">노출위치별 배너이미지 등록</div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 140px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th class="vt">배너광고 영역</th>
+                                        <td>
+                                            <div class="add-img-box file-single">
+                                                <input type="file" id="add_file01" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'event_file01')" class="blind">
+                                                <label for="add_file01"><span class="blind">이미지 첨부</span></label>
+                    
+                                                <!-- 썸네일 이미지 등록 영역 -->
+                                                <div id="event_file01" class="thum-img" onclick="orgImage(this);"></div>
+                                                <!-- // 썸네일 이미지 등록 영역 -->
+                    
+                                                <!-- 이미지 삭제 버튼 -->
+                                                <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_file01');return false;"><span class="blind">삭제</span></a>
+                                                <!-- // 이미지 삭제 버튼 -->
+                                            </div>
+                                            <div class="thum-txt">권장 사이즈 가로 0000px, 세로 0000px</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">추천이벤트</th>
+                                        <td>
+                                            <div class="add-img-box file-single">
+                                                <input type="file" id="add_file02" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'event_file02')" class="blind">
+                                                <label for="add_file02"><span class="blind">이미지 첨부</span></label>
+                    
+                                                <!-- 썸네일 이미지 등록 영역 -->
+                                                <div id="event_file02" class="thum-img" onclick="orgImage(this);"></div>
+                                                <!-- // 썸네일 이미지 등록 영역 -->
+                    
+                                                <!-- 이미지 삭제 버튼 -->
+                                                <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_file02');return false;"><span class="blind">삭제</span></a>
+                                                <!-- // 이미지 삭제 버튼 -->
+                                            </div>
+                                            <div class="thum-txt">권장 사이즈 가로 0000px, 세로 0000px</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">하단 AD 영역</th>
+                                        <td>
+                                            <div class="add-img-box file-single">
+                                                <input type="file" id="add_file03" accept=".png, .jpg, .jpeg, .gif" onchange="setThumbnail(event, 'event_file03')" class="blind">
+                                                <label for="add_file03"><span class="blind">이미지 첨부</span></label>
+                    
+                                                <!-- 썸네일 이미지 등록 영역 -->
+                                                <div id="event_file03" class="thum-img" onclick="orgImage(this);"></div>
+                                                <!-- // 썸네일 이미지 등록 영역 -->
+                    
+                                                <!-- 이미지 삭제 버튼 -->
+                                                <a href="#n" class="btn-img-del" onclick="imgFileDelete(this, 'add_file03');return false;"><span class="blind">삭제</span></a>
+                                                <!-- // 이미지 삭제 버튼 -->
+                                            </div>
+                                            <div class="thum-txt">권장 사이즈 가로 0000px, 세로 0000px</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--  // 노출위치별 배너이미지 등록 -->
+
+                        <div class="btn-box mt25 sp10">
+                            <div class="r">
+                                <a href="#n" class="btn w120 type2" onclick="layerContentClose();return false;">목록</a>
+                                <a href="#n" class="btn w120 type1" onclick="layerContentClose();return false;">저장하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#n" class="btn-layer-close" onclick="layerContentClose();return false;"><span class="blind">레이어 닫기</span></a>
+                </div>
+            </div>
+            <!-- // 레이어 컨텐츠 영역 -->
+
+            <!-- 원본 이미지 보기 팝업 -->
+            <div class="layer-popup" data-popup="image-popup">
+                <div class="tp">사진 크게 보기</div>
+                <div class="by">
+                    <div class="org-size"></div>
+                </div>
+                <div class="btn-popup">
+                    <a href="#n" class="btn w200 type2" onclick="layerPopupClose('image-popup');return false;">닫기</a>
+                </div>
+            </div>
+            <!-- // 원본 이미지 보기 팝업 -->
+
+            <!-- 수술분야 선택 레이어 팝업 -->
+            <div class="layer-popup w840" data-popup="event_popup">
+                <div class="tp">수술분야 선택</div>
+                <div class="by">
+                    <div class="medical-select">
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">눈</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">눈</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">쌍커풀</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">첫수술</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn-box mt25">
+                        <div class="r">
+                            <a href="#n" class="btn w85 type1">선택</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-popup">
+                    <a href="#n" class="btn w200 type2" onclick="layerPopupClose('event_popup');return false;">취소</a>
+                    <a href="#n" class="btn w200 type3" onclick="layerPopupClose('event_popup');return false;">등록하기</a>
+                </div>
+            </div>
+            <!-- // 수술분야 선택 레이어 팝업 -->
+           
+
+            <!-- Copyright -->
+            <div class="copyright" include-html="../include/footer.html"></div>
+            <!-- // Copyright -->
+
+        </article>
+    </main>
+    <!-- // content -->
+
+</div>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

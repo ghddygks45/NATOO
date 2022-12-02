@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="../../css/style.css">
+<script src="../../js/includeHTML.js"></script>
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/ui.js"></script>
+<title>NATOO | Facial and Skin AI Platform</title>
+</head>
+<body>
+
+<div class="wrap">
+
+    <!-- LNB -->
+    <div class="header-left" include-html="../include/header.html"></div>
+    <!-- // LNB -->
+
+    <!-- content -->
+    <main class="container">
+        <article class="content">
+            <!-- Total, Today | 관리자 로그인 정보 -->
+            <div class="con-head" include-html="../include/login_info.html"></div>
+            <!-- // Total, Today | 관리자 로그인 정보 -->
+
+            <!-- 컨텐츠 영역 -->
+            <div class="con-body">
+                <!-- 회원 가입 정책 관리 -->
+                <div class="section">
+                    <div class="tit-box">
+                        <div class="tit">회원 가입 정책 관리</div>
+                    </div>
+                    <div class="table-box">
+                        <table class="table">
+                            <colgroup>
+                                <col style="width:150px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="vt">가입연령제한설정</th>
+                                    <td>
+                                        <div class="inline-check block">
+                                            <span class="check">
+                                                <input type="radio" id="ck1-1" name="ck1" checked class="blind">
+                                                <label for="ck1-1">제한안함</label>
+                                            </span>
+                                            <span class="check">
+                                                <input type="radio" id="ck1-2" name="ck1" class="blind">
+                                                <label for="ck1-2">만 14세</label>
+                                                <select name="" id="">
+                                                    <option value="">가입불가</option>
+                                                </select>
+                                            </span>
+                                            <span class="check">
+                                                <input type="radio" id="ck1-3" name="ck1" class="blind">
+                                                <label for="ck1-3">만 19세</label>
+                                                <select name="" id="">
+                                                    <option value="">운영자 승인 후 가입가능</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>재가입기간제한설정</th>
+                                    <td>
+                                        회원탈퇴/삭제 후
+                                        <div class="input-box w120">
+                                            <div class="inner">
+                                                <div class="inp-txt">
+                                                    <span><input type="text" value="00"></span>
+                                                </div>
+                                                <div class="unit">일</div>
+                                            </div>
+                                        </div>
+                                        동안 재가입 불가
+                                        <span class="check ml10">
+                                            <input type="checkbox" id="member-ck" class="blind">
+                                            <label for="member-ck">사용안함</label>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="vt">가입불가회원아이디</th>
+                                    <td>
+                                        <textarea name="" id="" cols="30" rows="10" placeholder="회원가입을 제한할 아이디를 쉼표로 구분하여 입력하세요"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- // 회원 가입 정책 관리 -->
+                <div class="btn-box mt25">
+                    <div class="r">
+                        <a href="#n" class="btn w120 type1">저장하기</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- // 컨텐츠 영역 -->
+
+            <!--  레이어 컨텐츠 영역 -->
+            <div class="layer-content">
+                <div class="con">
+                    <div class="tp">
+                        <div class="l">
+                            <div class="tt">회원등급설정</div>
+                        </div>
+                        <div class="r">
+                            <div class="inline-btn sp5">
+                                <a href="#n" class="btn w55 tab type1 active">일반회원</a>
+                                <a href="#n" class="btn w55 tab type1">병원회원</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="by">
+                        <!-- 기본정보 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">기본정보</div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 135px;">
+                                    <col style="width: 150px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>회원등급이름</th>
+                                        <td colspan="2">
+                                            <input type="text" style="width: 180px;">
+                                            <a href="#n" class="btn w55 tab type1 ml10">등급이름 중복확인</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>기준점수</th>
+                                        <td colspan="2">
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div> 이상 ~
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div> 이내
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt">등급표시</th>
+                                        <td colspan="2">
+                                            <div class="inline-check block">
+                                                <span class="check">
+                                                    <input type="radio" id="memberck2-1" name="memberck2" checked class="blind">
+                                                    <label for="memberck2-1">텍스트</label>
+                                                    <div class="color-gray">회원 등급 이름에 등록된 테스트 노출</div>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="memberck2-2" name="memberck2" class="blind">
+                                                    <label for="memberck2-2">아이콘</label>
+                                                    <div class="color-gray">회원등급별 사용할 아이콘 등록 아이콘 사이즈 16x16px/ 이미지파일만 등록가능</div>
+                                                </span>
+                                                <span class="file">
+                                                    <input type="file" id="memberck2-file" name="memberck2-file" class="blind">
+                                                    <label for="memberck2-file"></label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>사용여부</th>
+                                        <td colspan="2">
+                                            <div class="inline-check">
+                                                <span class="check">
+                                                    <input type="radio" id="memberck3-1" name="memberck3" checked class="blind">
+                                                    <label for="memberck3-1">사용</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="memberck3-2" name="memberck3" class="blind">
+                                                    <label for="memberck3-2">미사용</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="vt" rowspan="4">등급별 혜택</th>
+                                        <td colspan="2">
+                                            <div class="inline-check">
+                                                <span class="check">
+                                                    <input type="radio" id="memberck4-1" name="memberck4" checked class="blind">
+                                                    <label for="memberck4-1">적용</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="memberck4-2" name="memberck4" class="blind">
+                                                    <label for="memberck4-2">미적용</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>가상성형의뢰 시</td>
+                                        <td>
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value="000"></span>
+                                                    </div>
+                                                    <div class="unit">%</div>
+                                                </div>
+                                            </div>
+                                            할인
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt">이벤트 신청금 할인</td>
+                                        <td>
+                                            <div class="inline-check block">
+                                                <span class="check">
+                                                    <input type="radio" id="memberck5-1" name="memberck5" checked class="blind">
+                                                    <label for="memberck5-1">제한없음</label>
+                                                </span>
+                                                <span class="check mt10">
+                                                    <input type="radio" id="memberck5-2" name="memberck5" class="blind">
+                                                    <label for="memberck5-2">건수제한</label>
+                                                    <div>
+                                                        <div>
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">건</div>
+                                                                </div>
+                                                            </div>
+                                                            이내 건당
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">%</div>
+                                                                </div>
+                                                            </div>
+                                                            할인
+                                                        </div>
+                                                        <div class="mt10">
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">만원</div>
+                                                                </div>
+                                                            </div>
+                                                            이상 경우
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">%</div>
+                                                                </div>
+                                                            </div>
+                                                            할인
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt">케어몰 이용금액 할인</td>
+                                        <td>
+                                            <div class="inline-check block">
+                                                <span class="check">
+                                                    <input type="radio" id="memberck6-1" name="memberck6"  class="blind">
+                                                    <label for="memberck6-1">제한없음</label>
+                                                </span>
+                                                <span class="check mt10">
+                                                    <input type="radio" id="memberck6-2" name="memberck6" checked class="blind">
+                                                    <label for="memberck6-2">건수제한</label>
+                                                    <div>
+                                                        <div>
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">건</div>
+                                                                </div>
+                                                            </div>
+                                                            이내 건당
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">%</div>
+                                                                </div>
+                                                            </div>
+                                                            할인
+                                                        </div>
+                                                        <div class="mt10">
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">만원</div>
+                                                                </div>
+                                                            </div>
+                                                            이상 경우
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">%</div>
+                                                                </div>
+                                                            </div>
+                                                            할인
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- 병원회원 -->
+                                    <!-- <tr>
+                                        <th class="vt" rowspan="3">등급별 혜택</th>
+                                        <td colspan="2">
+                                            <div class="inline-check">
+                                                <span class="check">
+                                                    <input type="radio" id="hospital-memberck1-1" name="hospital-memberck1" checked class="blind">
+                                                    <label for="hospital-memberck-1">적용</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="hospital-memberck1-2" name="hospital-memberck1" class="blind">
+                                                    <label for="hospital-memberck1-2">미적용</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>입점수수료</td>
+                                        <td>
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value="000"></span>
+                                                    </div>
+                                                    <div class="unit">%</div>
+                                                </div>
+                                            </div>
+                                            할인
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="vt"> 배너광고 신청금액 할인</td>
+                                        <td>
+                                            <div class="inline-check block">
+                                                <span class="check">
+                                                    <input type="radio" id="hospital-memberck2-1" name="hospital-memberck2" checked class="blind">
+                                                    <label for="hospital-memberck2-1">제한없음</label>
+                                                </span>
+                                                <span class="check mt10">
+                                                    <input type="radio" id="hospital-memberck2-2" name="hospital-memberck2" class="blind">
+                                                    <label for="hospital-memberck2-2">건수제한</label>
+                                                    <div>
+                                                        <div>
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">건</div>
+                                                                </div>
+                                                            </div>
+                                                            이내 건당
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">%</div>
+                                                                </div>
+                                                            </div>
+                                                            할인
+                                                        </div>
+                                                        <div class="mt10">
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">만원</div>
+                                                                </div>
+                                                            </div>
+                                                            이상 경우
+                                                            <div class="input-box w80">
+                                                                <div class="inner">
+                                                                    <div class="inp-txt">
+                                                                        <span><input type="text" value="000"></span>
+                                                                    </div>
+                                                                    <div class="unit">%</div>
+                                                                </div>
+                                                            </div>
+                                                            할인
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr> -->
+                                    <!-- // 병원회원 -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // 기본정보 -->
+
+                        <!-- 등급평가 기준설정 -->
+                        <div class="section">
+                            <div class="tit-box">
+                                <div class="tit">등급평가 기준설정</div>
+                            </div>
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 135px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                       <th>실정평가기간</th>
+                                       <td>
+                                            <div class="inline-check block">
+                                                <span class="check">
+                                                    <input type="radio" id="memberck7-1" name="memberck7" checked class="blind">
+                                                    <label for="memberck7-1">기간제한 없음</label>
+                                                </span>
+                                                <span class="check">
+                                                    <input type="radio" id="memberck7-2" name="memberck7" class="blind">
+                                                    <label for="memberck7-2">기간제한 없음</label>
+                                                    <div>
+                                                        <select name="" id="">
+                                                            <option value="">직전(어제)</option>
+                                                        </select>
+                                                        <span class="ml10">~</span>
+                                                        <select name="" id="" class="ml10">
+                                                            <option value="">12개월</option>
+                                                        </select>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                        <th>등급평가일</th>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">12개월 마다</option>
+                                            </select>
+                                            <select name="" id="" class="ml10">
+                                                <option value="">1일</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>로그인 횟수</th>
+                                        <td>
+                                            1회/일 로그인 당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>무료성형모델</th>
+                                        <td>
+                                            무료성형모델 활동 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>수술일지 공개</th>
+                                        <td>
+                                            공개리뷰 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>상담일지 공개</th>
+                                        <td>
+                                            공개리뷰 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>진단/견적 의뢰</th>
+                                        <td>
+                                            가상성형의뢰 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>상담예약</th>
+                                        <td>
+                                            상담예약 이용 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>사진 등록</th>
+                                        <td>
+                                            사진촬영 후 사진등록 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>수술비용 (공개리뷰) </th>
+                                        <td>
+                                            수술비용 등록 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>친구추천</th>
+                                        <td>
+                                            친구추천 수당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- 병원회원 -->
+                                    <!-- <tr>
+                                        <th>로그인 횟수</th>
+                                        <td>
+                                            1회/일 로그인 당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>배너광고</th>
+                                        <td>
+                                            배너광고 금액
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">만원</div>
+                                                </div>
+                                            </div>
+                                            당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>무료성형모델 </th>
+                                        <td>
+                                            무료성형모델 1명당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>리뷰 등록 건당</th>
+                                        <td>
+                                            리뷰 등록건 당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>진단/견적 진행</th>
+                                        <td>
+                                            진단/견적 진행 건 당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>이벤트 등록</th>
+                                        <td>
+                                            이벤트 등록건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>수술전후 사진 제공</th>
+                                        <td>
+                                            수술전후 사진 제공 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>사진 등록</th>
+                                        <td>
+                                            사진촬영 후 사진등록 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>수술비용 등록</th>
+                                        <td>
+                                            수술비용 등록 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>게시글 작성</th>
+                                        <td>
+                                            게시글 작성 완성도 100% 건당
+                                            <div class="input-box w80">
+                                                <div class="inner">
+                                                    <div class="inp-txt">
+                                                        <span><input type="text" value=""></span>
+                                                    </div>
+                                                    <div class="unit">점</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr> -->
+                                    <!-- // 병원회원 -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // 등급평가 기준설정 -->
+
+                        <div class="btn-box mt25 sp10">
+                            <div class="r">
+                                <a href="#n" class="btn w120 type2" onclick="layerContentClose();return false;">목록</a>
+                                <a href="#n" class="btn w120 type1">저장하기</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#n" class="btn-layer-close" onclick="layerContentClose();return false;"><span class="blind">레이어 닫기</span></a>
+                </div>
+            </div>
+            <!-- // 레이어 컨텐츠 영역 -->
+
+            <!-- 완료처리 레이어 팝업 -->
+            <div class="layer-popup w480" data-popup="counseling_popup01">
+                <div class="tp">완료처리</div>
+                <div class="by">
+                    <div class="layer-select">
+                        <select name="" id="" onchange="selectChange(this)">
+                            <option value="" selected disabled>상담선택</option>
+                            <option value="counseling_reserve">방문예약</option>
+                            <option value="counseling_tel">전화상담</option>
+                            <option value="counseling_chat">채팅상담</option>
+                            <option value="counseling_etc">기타</option>
+                        </select> 
+                        <div id="counseling_reserve" class="select_con">
+                            <div class="calendar-box">
+                                <span class="date-field"><input type="text" class="datepicker" style="width:74px" value="0000-00-00"></span>
+                            </div>
+                        </div>
+                        <div id="counseling_etc" class="select_con etc_con">
+                           <input type="text" placeholder="15자 이내로 작성하세요." style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-popup mt0">
+                    <a href="#n" class="btn w200 type2" onclick="layerPopupClose('counseling_popup01');return false;">취소</a>
+                    <a href="#n" class="btn w200 type3" onclick="layerPopupClose('counseling_popup01');return false;">저장</a>
+                </div>
+            </div>
+            <!-- // 완료처리 레이어 팝업 -->
+
+            <!-- Copyright -->
+            <div class="copyright" include-html="../include/footer.html"></div>
+            <!-- // Copyright -->
+
+        </article>
+    </main>
+    <!-- // content -->
+
+</div>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

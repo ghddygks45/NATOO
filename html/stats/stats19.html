@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="../../css/style.css">
+<script src="../../js/includeHTML.js"></script>
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/ui.js"></script>
+<title>NATOO | Facial and Skin AI Platform</title>
+</head>
+<body>
+
+<div class="wrap">
+
+    <!-- LNB -->
+    <div class="header-left" include-html="../include/header.html"></div>
+    <!-- // LNB -->
+
+    <!-- content -->
+    <main class="container">
+        <article class="content">
+            <!-- Total, Today | 관리자 로그인 정보 -->
+            <div class="con-head" include-html="../include/login_info.html"></div>
+            <!-- // Total, Today | 관리자 로그인 정보 -->
+
+            <!-- 컨텐츠 영역 -->
+            <div class="con-body">
+                <!-- 만족도 통계 -->
+                <div class="section">
+                    <div class="tit-box">
+                        <div class="tit">만족도 통계</div>
+                        <div class="r-box">
+                            <div class="inline-btn sp5">
+                                <a href="#n" class="btn w55 tab type1 active">병원만족도</a>
+                                <a href="#n" class="btn w55 tab type1">수술만족도</a>
+                                <a href="#n" class="btn w55 tab type1">상담만족도</a>
+                                <a href="#n" class="btn w55 tab type1">AI 예측도</a>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <colgroup>
+                            <col width="150px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <div class="inline-check mr20 stats_btn">
+                                        <span class="check">
+                                            <input type="radio" id="ck1-1" name="ck1" checked class="blind" data-tab="check01">
+                                            <label for="ck1-1">월별</label>
+                                        </span>
+                                        <span class="check">
+                                            <input type="radio" id="ck1-2" name="ck1" class="blind" data-tab="check02">
+                                            <label for="ck1-2">일별</label>
+                                        </span>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div class="month-search">
+                                        <div class="l">
+                                            <div id="check01" class="stats_con first">
+                                                <select name="" id="">
+                                                    <option value="">연도선택</option>
+                                                </select>
+                                            </div>
+                                            <div id="check02" class="stats_con">
+                                                <select name="" id="">
+                                                    <option value="">연도선택</option>
+                                                </select>
+                                                <select name="" id="" class="ml10">
+                                                    <option value="">월선택</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="r">
+                                            <a href="#n" class="btn w55 type1">검색</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- // 만족도 통계 -->
+
+                <!-- 목록 -->
+                <div class="section mt15">
+                    <div class="list-tb-top">
+                        <div class="l">
+                            <span>기간 : 2020.11.01 – 2020.11.31 </span>
+                        </div>
+                        <div class="r">
+                            <div class="inline-btn sp3 ml10">
+                                <a href="#n" class="btn w55 tab type1">엑셀다운로드</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-box">
+                        <table class="table list-table">
+                            <colgroup>
+                                <col style="width:35px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>순위</th>
+                                    <th>병원명</th>
+                                    <th>총점</th>
+                                    <th>시술효과 </th>
+                                    <th>서비스친절도</th>
+                                    <th>시설만족도</th>
+                                    <th>상담만족도</th>
+                                    <th>지인추천</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td><span class="color-blue">합계</span></td>
+                                    <td><span class="color-blue">5</span></td>
+                                    <td><span class="color-blue">4</span></td>
+                                    <td><span class="color-blue">3</span></td>
+                                    <td><span class="color-blue">2</span></td>
+                                    <td><span class="color-blue">1</span></td>
+                                    <td><span class="color-blue">4</span></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>AAA 성형외과</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>BBB 성형외과</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>CCC 성형외과</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <!-- // 목록 -->
+            </div>
+            <!-- // 컨텐츠 영역 -->
+
+            <!-- Copyright -->
+            <div class="copyright" include-html="../include/footer.html"></div>
+            <!-- // Copyright -->
+
+        </article>
+    </main>
+    <!-- // content -->
+
+</div>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

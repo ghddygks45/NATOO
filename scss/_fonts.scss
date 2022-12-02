@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* Spoqa */
+@font-face {
+    @include webFont('Spoqa', 100, Spoqa-Thin);
+}
+
+@font-face {
+    @include webFont('Spoqa', 300, Spoqa-Light);
+}
+
+@font-face {
+    @include webFont('Spoqa', 400, Spoqa-Regular);
+}
+
+@font-face {
+    @include webFont('Spoqa', 700, Spoqa-Bold);
+}
+
+/* Lato */
+@font-face {
+    @include webFont('Lato', 300, Lato-Light);
+}
+
+@font-face {
+    @include webFont('Lato', 400, Lato-Regular);
+}
+
+@font-face {
+    @include webFont('Lato', 700, Lato-Bold);
+}
+
+@font-face {
+    @include webFont('Lato', 900, Lato-Black);
+}

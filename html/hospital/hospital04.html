@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="../../css/style.css">
+<script src="../../js/includeHTML.js"></script>
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/ui.js"></script>
+<title>NATOO | Facial and Skin AI Platform</title>
+</head>
+<body>
+
+<div class="wrap">
+
+    <!-- LNB -->
+    <div class="header-left" include-html="../include/header.html"></div>
+    <!-- // LNB -->
+
+    <!-- content -->
+    <main class="container">
+        <article class="content">
+
+            <!-- Total, Today | 관리자 로그인 정보 -->
+            <div class="con-head" include-html="../include/login_info.html"></div>
+            <!-- // Total, Today | 관리자 로그인 정보 -->
+
+            <!-- 컨텐츠 영역 -->
+            <div class="con-body">
+                
+                <div class="section">
+
+                    <!-- 검색 -->
+                    <div class="search-form">
+                        <div class="tit-box">
+                            <div class="tit">
+                                진료정보 관리
+                                <div class="med-price">수술비용 <span class="color-gray">(단위 : 만원, 가격표시 : TAX미포함 / TAX포함)</span></div>
+                            </div>
+                            <div class="r-box">
+                                <select name="" id="" class="nor-select">
+                                    <option value="">KOREAN</option>
+                                </select>
+                            </div>
+                        </div>
+                        <table class="table mt5">
+                            <colgroup>
+                                <col style="width: 110px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>외국인 수가</th>
+                                    <td>
+                                        <div class="input-box w90">
+                                            <div class="inner">
+                                                <div class="inp-txt"><input type="text"></div>
+                                                <div class="unit">%</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- // 검색-->
+
+                    <!-- 목록 -->
+                    <div class="list-tb-top">
+                        <div class="l">
+                            <select name="" id="" class="nor-select">
+                                <option value="">국가/인종 선택</option>
+                            </select>
+                        </div>
+                        <div class="r">
+                            <div class="inline-btn sp5">
+                                <a href="#n" class="btn w85 type1">엑셀업로드</a>
+                                <a href="#n" class="btn w85 type1">엑셀다운로드</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-box">
+                        <table class="table list-table">
+                            <colgroup>
+                                <col style="width:35px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                                <col style="width:100px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="all" class="blind">
+                                            <label for="all"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </th>
+                                    <th>수술분야1</th>
+                                    <th>수술분야2</th>
+                                    <th>수술분야3</th>
+                                    <th>수술분야4</th>
+                                    <th>국내 수술비용</th>
+                                    <th>외국인 수술비용</th>
+                                    <th>수술S/O</th>
+                                    <th>수술F/U</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck1" class="blind" checked>
+                                            <label for="ck1"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>얼굴</td>
+                                    <td>눈</td>
+                                    <td>매몰</td>
+                                    <td>첫수술</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>00일 후</td>
+                                    <td>00일 후</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck1" class="blind" checked>
+                                            <label for="ck1"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>얼굴</td>
+                                    <td>눈</td>
+                                    <td>매몰</td>
+                                    <td>첫수술</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>00일 후</td>
+                                    <td>00일 후</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck1" class="blind" checked>
+                                            <label for="ck1"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>얼굴</td>
+                                    <td>눈</td>
+                                    <td>매몰</td>
+                                    <td>첫수술</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>00일 후</td>
+                                    <td>00일 후</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck1" class="blind">
+                                            <label for="ck1"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>얼굴</td>
+                                    <td>눈</td>
+                                    <td>매몰</td>
+                                    <td>첫수술</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>00일 후</td>
+                                    <td>00일 후</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check-single">
+                                            <input type="checkbox" id="ck1" class="blind">
+                                            <label for="ck1"><span class="blind">체크박스</span></label>
+                                        </span>
+                                    </td>
+                                    <td>얼굴</td>
+                                    <td>눈</td>
+                                    <td>매몰</td>
+                                    <td>첫수술</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>100만원 / 110만원</td>
+                                    <td>00일 후</td>
+                                    <td>00일 후</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                     <!-- // 목록-->
+
+                    <div class="btn-box sp5 mt25">
+                        <div class="l">
+                            <a href="#n" class="btn w85 type1">선택 삭제</a>
+                        </div>
+                        <div class="r">
+                            <a href="#n" class="btn w120 type2" onclick="layerPopupOpen('estimate_popup');return false;">추가</a>
+                            <a href="#n" class="btn w120 type1">저장</a>
+                        </div>
+                    </div>
+
+                    <!-- 페이징 -->
+                    <div class="pagination">
+                        <strong>1</strong>
+                        <a href="#n">2</a>
+                        <a href="#n">3</a>
+                        <a href="#n">4</a>
+                        <a href="#n">5</a>
+                    </div>
+                    <!-- // 페이징 -->
+
+                </div>
+
+            </div>
+            <!-- // 컨텐츠 영역 -->
+
+            <!-- 레이어 컨텐츠 영역 -->
+            <div class="layer-content">
+                <div class="con">
+                    <div class="tp">
+                        <div class="l">
+                            <div class="tt">의료진 등록</div>
+                        </div>
+                        <div class="r">
+                            <div class="msg">
+                                <a href="#n">
+                                    <span>99</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="by">
+
+                    </div>
+                    <a href="#n" class="btn-layer-close" onclick="layerContentClose();return false;"><span class="blind">레이어 닫기</span></a>
+                </div>
+            </div>
+            <!-- // 레이어 컨텐츠 영역 -->
+
+            <!-- 진료비 등록 팝업 -->
+            <div class="layer-popup w840" data-popup="estimate_popup">
+                <div class="tp">진료비 등록</div>
+                <div class="by">
+                    <div class="medical-select">
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">눈</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">눈</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">쌍커풀</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">분야를 선택하세요</option>
+                                <option value="">첫수술</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn-box mt25">
+                        <div class="r">
+                            <a href="#n" class="btn w85 type1">선택</a>
+                        </div>
+                    </div>
+                    <div class="medical-select-list">
+                        <ul class="list04">
+                            <li>
+                                <div class="l">
+                                    <span class="medical-selected">
+                                        눈
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        코
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        피부
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        지방흡입
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                </div>
+                                <div class="r">
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">국내</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20">2000</span>
+                                            </div>
+                                            <div class="unit">만원</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">외국인수가</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20 color-pink">10</span>
+                                            </div>
+                                            <div class="unit">%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="l">
+                                    <span class="medical-selected">
+                                        눈
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        코
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        피부
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        지방흡입
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                </div>
+                                <div class="r">
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">국내</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20">2000</span>
+                                            </div>
+                                            <div class="unit">만원</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">외국인수가</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20 color-pink">10</span>
+                                            </div>
+                                            <div class="unit">%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="l">
+                                    <span class="medical-selected">
+                                        눈
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        코
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        피부
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                    <span class="medical-selected">
+                                        지방흡입
+                                        <a href="#n"><span class="blind">삭제</span></a>
+                                    </span>
+                                </div>
+                                <div class="r">
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">국내</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20">2000</span>
+                                            </div>
+                                            <div class="unit">만원</div>
+                                        </div>
+                                    </div>
+                                    <div class="input-box w120">
+                                        <div class="inner">
+                                            <div class="l">외국인수가</div>
+                                            <div class="inp-txt">
+                                                <span class="f-size20 color-pink">10</span>
+                                            </div>
+                                            <div class="unit">%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-popup">
+                    <a href="#n" class="btn w200 type2" onclick="layerPopupClose('estimate_popup');return false;">취소</a>
+                    <a href="#n" class="btn w200 type3" onclick="layerPopupClose('estimate_popup');return false;">등록하기</a>
+                </div>
+            </div>
+            <!-- // 진료비 등록 팝업 -->
+
+            <!-- Copyright -->
+            <div class="copyright" include-html="../include/footer.html"></div>
+            <!-- // Copyright -->
+
+        </article>
+    </main>
+    <!-- // content -->
+
+</div>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

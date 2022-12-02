@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)]><!--><html lang="ko"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="../../css/style.css">
+<script src="../../js/includeHTML.js"></script>
+<script src="../../js/jquery-3.5.1.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/ui.js"></script>
+<title>NATOO | Facial and Skin AI Platform</title>
+</head>
+<body>
+
+<div class="wrap">
+
+    <!-- LNB -->
+    <div class="header-left" include-html="../include/header.html"></div>
+    <!-- // LNB -->
+
+    <!-- content -->
+    <main class="container">
+        <article class="content">
+
+            <!-- Total, Today | 관리자 로그인 정보 -->
+            <div class="con-head" include-html="../include/login_info.html"></div>
+            <!-- // Total, Today | 관리자 로그인 정보 -->
+
+            <!-- 컨텐츠 영역 -->
+            <div class="con-body">
+
+                <!-- 진료코드 관리 -->
+                <div class="section">
+
+                    <!-- 검색 -->
+                    <div class="search-form">
+                        <div class="tit-box">
+                            <div class="tit">진료코드 관리</div>
+                            <div class="r-box">
+                                <select name="" id="" class="nor-select">
+                                    <option value="">KOREAN</option>
+                                </select>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <colgroup>
+                                <col style="width: 110px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>진료코드명</th>
+                                    <td>
+                                        <div class="search-field">
+                                            <span class="f">
+                                                <input type="text" placeholder="메세지를 입력해주세요.">
+                                            </span>
+                                            <span class="s">
+                                                <a href="#n" class="btn w55 type1">검색</a>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- // 검색-->
+                    
+                    <div class="row-box">
+                        <div class="l">
+                            <div class="tit-box">
+                                <div class="tit">코드그룹 생성</div>
+                            </div>
+                            <div class="tree-view-box no-scroll">
+                                <table class="table">
+                                    <colgroup>
+                                        <col style="width: 200px;">
+                                        <col style="width: 100px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>코드명</th>
+                                            <th>사용여부</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                <ul class="tree-view">
+                                                    <li>
+                                                        <div class="tr-box">
+                                                            <div class="c">
+                                                                <a href="#n">1차 메뉴</a>
+                                                            </div>
+                                                            <div class="r txt-center">
+                                                                <a href="#n" class="color-blue">[사용]</a>
+                                                            </div>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="tr-box">
+                                                                    <div class="c">
+                                                                        <a href="#n">2차 메뉴</a>
+                                                                    </div>
+                                                                    <div class="r txt-center">
+                                                                        <a href="#n" class="color-blue">[사용]</a>
+                                                                    </div>
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="tr-box">
+                                                                            <div class="c">
+                                                                                <a href="#n">3차 메뉴</a>
+                                                                            </div>
+                                                                            <div class="r txt-center">
+                                                                                <a href="#n" class="color-blue">[사용]</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="tr-box">
+                                                                            <div class="c">
+                                                                                <a href="#n">3차 메뉴</a>
+                                                                            </div>
+                                                                            <div class="r txt-center">
+                                                                                <a href="#n" class="color-blue">[사용]</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tr-box">
+                                                            <div class="c">
+                                                                <a href="#n">1차 메뉴</a>
+                                                            </div>
+                                                            <div class="r txt-center">
+                                                                <a href="#n">[미사용]</a>
+                                                            </div>
+                                                        </div>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="tr-box">
+                                                                    <div class="c">
+                                                                        <a href="#n">2차 메뉴</a>
+                                                                    </div>
+                                                                    <div class="r txt-center">
+                                                                        <a href="#n">[미사용]</a>
+                                                                    </div>
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="tr-box">
+                                                                            <div class="c">
+                                                                                <a href="#n">3차 메뉴</a>
+                                                                            </div>
+                                                                            <div class="r txt-center">
+                                                                                <a href="#n">[미사용]</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <div class="tr-box">
+                                                                    <div class="c">
+                                                                        <a href="#n">2차 메뉴</a>
+                                                                    </div>
+                                                                    <div class="r txt-center">
+                                                                        <a href="#n">[미사용]</a>
+                                                                    </div>
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="tr-box">
+                                                                            <div class="c">
+                                                                                <a href="#n">3차 메뉴</a>
+                                                                            </div>
+                                                                            <div class="r txt-center">
+                                                                                <a href="#n">[미사용]</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <script>
+                                    $('.tree-view').each(function(){
+                                        $(this).find('li')
+                                        .has('ul')
+                                        .addClass('rt')
+                                        .on('click', '.c a', function(){
+                                            $('.c a').removeClass();
+                                            $(this).addClass('active');
+                                            $(this).parents('.tr-box').toggleClass('open');
+                                            return false;
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <div class="btn-box sp5 mt25">
+                                <div class="r">
+                                    <a href="#n" class="btn w120 type1" onclick="layerPopupOpen('popup');return false;">코드그룹생성</a>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <strong>1</strong>
+                                <a href="#n">2</a>
+                                <a href="#n">3</a>
+                                <a href="#n">4</a>
+                                <a href="#n">5</a>
+                            </div>
+                        </div>
+                        <div class="r">
+
+                            <!-- 기본정보 -->
+                            <section>
+                                <div class="tit-box">
+                                    <div class="tit">기본정보</div>
+                                </div>
+                                <table class="table">
+                                    <colgroup>
+                                        <col style="width: 110px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>코드명(국문) <strong class="color-blue">*</strong></th>
+                                            <td>
+                                                <input type="text" style="width: 200px;" placeholder="코드(국문)명을 입력하세요">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>코드명(영문) <strong class="color-blue">*</strong></th>
+                                            <td>
+                                               <input type="text" style="width: 200px;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>코드아이디 <strong class="color-blue">*</strong></th>
+                                            <td>
+                                                <input type="text" style="width: 200px;" placeholder="코드아이디를 입력하세요">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>상위코드명</th>
+                                            <td>얼굴</td>
+                                        </tr>
+                                        <tr>
+                                            <th>사용설정 <strong class="color-blue">*</strong></th>
+                                            <td>
+                                                <div class="inline-check">
+                                                    <span class="check">
+                                                        <input type="radio" id="ck1-1" name="ck1" checked class="blind">
+                                                        <label for="ck1-1">사용</label>
+                                                    </span>
+                                                    <span class="check">
+                                                        <input type="radio" id="ck1-2" name="ck1" class="blind">
+                                                        <label for="ck1-2">미사용</label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="btn-box mt25 sp10">
+                                    <div class="r">
+                                        <a href="#n" class="btn w120 type1">삭제</a>
+                                        <a href="#n" class="btn w120 type2">저장</a>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- // 기본정보 -->
+
+                            <!-- 하위분류 설정 -->
+                            <div class="section">
+                                <div class="sort-set">
+                                    <div class="tit-box dbr-none">
+                                        <div class="tit">하위분류 설정</div>
+                                        <div class="r-box">
+                                            <a href="#n" class="btn w55 type1">추가</a>
+                                        </div>
+                                    </div>
+                                    <table class="table bdr-top">
+                                        <colgroup>
+                                            <col style="width: 110px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>코드명 국문 <strong class="color-blue">*</strong></th>
+                                                <td>
+                                                    <input type="text" style="width: 180px;">
+                                                    <span class="check ml10">
+                                                        <input type="checkbox" id="ck2-1" name="ck1" class="blind">
+                                                        <label for="ck2-1">사용</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>코드명 영문 <strong class="color-blue">*</strong></th>
+                                                <td><input type="text" style="width: 180px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>약어</th>
+                                                <td><input type="text" style="width: 180px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>코드 아이디 <strong class="color-blue">*</strong></th>
+                                                <td>Index001_001</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="btn-box mt25 sp10">
+                                        <div class="r">
+                                            <a href="#n" class="btn w120 type1">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sort-set">
+                                    <table class="table bdr-top">
+                                        <colgroup>
+                                            <col style="width: 110px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>코드명 국문 <strong class="color-blue">*</strong></th>
+                                                <td>
+                                                    <input type="text" style="width: 180px;">
+                                                    <span class="check ml10">
+                                                        <input type="checkbox" id="ck2-1" name="ck1" class="blind">
+                                                        <label for="ck2-1">사용</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>코드명 영문 <strong class="color-blue">*</strong></th>
+                                                <td><input type="text" style="width: 180px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>약어</th>
+                                                <td><input type="text" style="width: 180px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>코드 아이디 <strong class="color-blue">*</strong></th>
+                                                <td>Index001_001</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="btn-box mt25 sp10">
+                                        <div class="r">
+                                            <a href="#n" class="btn w120 type1">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 하위분류 설정 -->
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 진료코드 관리 -->
+
+            </div>
+            <!-- // 컨텐츠 영역 -->
+
+            <!-- 레이어 컨텐츠 영역 -->
+            <div class="layer-content">
+                <div class="con">
+                    <div class="tp">
+                        <div class="l">
+                            <div class="tt">운영자 등록</div>
+                        </div>
+                        <div class="r">
+                            <div class="msg">
+                                <a href="#n">
+                                    <span>99</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="by">
+
+                    </div>
+                    <a href="#n" class="btn-layer-close" onclick="layerContentClose();return false;"><span class="blind">레이어 닫기</span></a>
+                </div>
+            </div>
+            <!-- // 레이어 컨텐츠 영역 -->
+
+            <!-- 코드그룹 생성 팝업 -->
+            <div class="layer-popup w700" data-popup="popup">
+                <div class="tp">코드그룹 생성</div>
+                <div class="by">
+                    <table class="table bdr-top">
+                        <colgroup>
+                            <col style="width: 150px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>코드아이디 <strong class="color-blue">*</strong></th>
+                                <td>
+                                    <a href="#n" class="btn w105 type1">코드아이디 선택</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>코드 그룹명 (국문) <strong class="color-blue">*</strong></th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>코드 그룹명 (영문) <strong class="color-blue">*</strong></th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>사용설정 <strong class="color-blue">*</strong></th>
+                                <td>
+                                    <div class="inline-check">
+                                        <span class="check">
+                                            <input type="radio" id="ck3-1" name="ck3" checked class="blind">
+                                            <label for="ck3-1">사용</label>
+                                        </span>
+                                        <span class="check">
+                                            <input type="radio" id="ck3-2" name="ck3" class="blind">
+                                            <label for="ck3-2">미사용</label>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 코드 아이디 목록 -->
+                    <div class="code_id">
+                        <table class="table bdr-top">
+                            <thead>
+                                <tr>
+                                    <th>코드명_국문</th>
+                                    <th>코드명_영문</th>
+                                    <th>코드아이디</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code1" name="code" class="blind">
+                                            <label for="code1">눈</label>
+                                        </span>
+                                    </td>
+                                    <td>Eyes</td>
+                                    <td>EYES</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code2" name="code" class="blind">
+                                            <label for="code2">코</label>
+                                        </span>
+                                    </td>
+                                    <td>Nose, Rhinoplasty</td>
+                                    <td>NOSE</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code3" name="code" class="blind">
+                                            <label for="code3">지방이식</label>
+                                        </span>
+                                    </td>
+                                    <td>Fat Grafting, Fat Graft</td>
+                                    <td>FATG</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code4" name="code" class="blind">
+                                            <label for="code4">윤곽수술</label>
+                                        </span>
+                                    </td>
+                                    <td>Face Countouring</td>
+                                    <td>FACE</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code5" name="code" class="blind">
+                                            <label for="code5">치과</label>
+                                        </span>
+                                    </td>
+                                    <td>Dental</td>
+                                    <td>DENT</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code6" name="code" class="blind">
+                                            <label for="code6">리프팅</label>
+                                        </span>
+                                    </td>
+                                    <td>Lifting</td>
+                                    <td>LIFT</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code7" name="code" class="blind">
+                                            <label for="code7">가슴</label>
+                                        </span>
+                                    </td>
+                                    <td>Breast Sugery, Breast</td>
+                                    <td>BRST</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code8" name="code" class="blind">
+                                            <label for="code8">줄기세포</label>
+                                        </span>
+                                    </td>
+                                    <td>Stem Cell</td>
+                                    <td>STCE</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code9" name="code" class="blind">
+                                            <label for="code9">지방흡입</label>
+                                        </span>
+                                    </td>
+                                    <td>Liposuction</td>
+                                    <td>LIPO</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code10" name="code" class="blind">
+                                            <label for="code10">바디</label>
+                                        </span>
+                                    </td>
+                                    <td>Body Shaping, Body</td>
+                                    <td>BODY</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code11" name="code" class="blind">
+                                            <label for="code11">미니 지방흡입</label>
+                                        </span>
+                                    </td>
+                                    <td>Micro Liposuction</td>
+                                    <td>MILP</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code12" name="code" class="blind">
+                                            <label for="code12">필러</label>
+                                        </span>
+                                    </td>
+                                    <td>Filler</td>
+                                    <td>FLLR</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code13" name="code" class="blind">
+                                            <label for="code13">보톡스</label>
+                                        </span>
+                                    </td>
+                                    <td>Botox</td>
+                                    <td>BOTX</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code14" name="code" class="blind">
+                                            <label for="code14">주사</label>
+                                        </span>
+                                    </td>
+                                    <td>injection</td>
+                                    <td>INJT</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code15" name="code" class="blind">
+                                            <label for="code15">모발이식</label>
+                                        </span>
+                                    </td>
+                                    <td>Hair Transplantation</td>
+                                    <td>HRTR</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code16" name="code" class="blind">
+                                            <label for="code16">피부관리</label>
+                                        </span>
+                                    </td>
+                                    <td>Skin Care</td>
+                                    <td>SKIN</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code17" name="code" class="blind">
+                                            <label for="code17">레이저</label>
+                                        </span>
+                                    </td>
+                                    <td>Laser</td>
+                                    <td>LASR</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code18" name="code" class="blind">
+                                            <label for="code18">미세침치료</label>
+                                        </span>
+                                    </td>
+                                    <td>MTS</td>
+                                    <td>MTS</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code19" name="code" class="blind">
+                                            <label for="code19">제모</label>
+                                        </span>
+                                    </td>
+                                    <td>Hair Removal</td>
+                                    <td>HRRM</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code20" name="code" class="blind">
+                                            <label for="code20">복합시술</label>
+                                        </span>
+                                    </td>
+                                    <td>Complex</td>
+                                    <td>CPLX</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code21" name="code" class="blind">
+                                            <label for="code21">기타</label>
+                                        </span>
+                                    </td>
+                                    <td>ETC</td>
+                                    <td>ETC</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="check">
+                                            <input type="radio" id="code22" name="code" class="blind">
+                                            <label for="code22">반영구</label>
+                                        </span>
+                                    </td>
+                                    <td>Semi-Permanent Tattoo</td>
+                                    <td>TATO</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- // 코드 아이디 목록 -->
+
+                </div>
+                <div class="btn-popup">
+                    <a href="#n" class="btn w200 type2" onclick="layerPopupClose('popup');return false;">취소</a>
+                    <a href="#n" class="btn w200 type3" onclick="alertPopupOpen('alert-popup');return false;">저장</a>
+                </div>
+            </div>
+            <!-- // 코드그룹 생성 팝업 -->
+
+            <!-- Copyright -->
+            <div class="copyright" include-html="../include/footer.html"></div>
+            <!-- // Copyright -->
+
+        </article>
+    </main>
+    <!-- // content -->
+
+</div>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

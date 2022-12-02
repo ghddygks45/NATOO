@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+// WebFont NotoSans
+@mixin webFont($font-family, $font-weight, $font-name) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    src: local("※"), url('../fonts/' + $font-name + '.woff2') format("woff2"), url('../fonts/' + $font-name + '.woff') format("woff");
+}
+
+// clearFix
+@mixin clearFix {
+    display:block;
+    content:'';
+    clear:both;
+ }

@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    min-width: 1280px;
+    background: #395260;
+    line-height: 1.5;
+    font-family: Lato, Spoqa, Dotum;
+    font-size: 13px;
+    font-weight: 400;
+    word-break: keep-all;
+    color: #707070;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    line-height: normal;
+    font-weight: normal;
+  }
+  
+  ul, ol, li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #666;
+  
+    &:hover, &:active, &:visited {
+      text-decoration: none;
+    }
+  }
+  
+  img {
+    border: 0;
+    vertical-align: top;
+  }
+  
+  button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 300;
+    outline: 0
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d7d7d7;
+    font-family: inherit;
+    font-weight: 300;
+    resize: none;
+  }
+  
+  em, address {
+    font-style: normal;
+  }
+  
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  
+  caption {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+  }
+  
+  label {
+    vertical-align: top;
+    cursor: pointer;
+  }
+  
+  input {
+    &[type=text], &[type=password], &[type=date], &[type=tel] {
+      border: 0;
+      border-radius: 0;
+      -webkit-appearance: none;
+      appearance: none;
+      box-sizing: border-box;
+      outline: 0;
+    }
+  }
+  
+  select, textarea {
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    outline: 0;
+  }
+  
+  input {
+    &[type=checkbox], &[type=radio] {
+      vertical-align: middle;
+    }
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  ::selection {
+    background: #92cfe7;
+  }
+  
+  ::placeholder {
+    font-weight: 300;
+    color: #959595 !important;
+  }
+
+  :-ms-input-placeholder {
+    font-weight: 300;
+    color: #959595 !important;
+  }
+  
+  ::-ms-input-placeholder {
+    font-weight: 300;
+    color: #959595 !important;
+  }
+  
+  .ie9 select {
+    padding: 0 0 0 5px;
+    background-image: none !important;
+  }
